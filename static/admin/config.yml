@@ -1,0 +1,262 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# When working locally, run `npx netlify-cms-proxy-server`
+# to enable local CMS editing without Netlify authentication
+local_backend: true
+
+# Media files storage
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Editorial Workflow for draft/review/publish
+publish_mode: editorial_workflow
+
+# Site URL for proper link generation
+site_url: https://growclimate.com
+display_url: https://growclimate.com
+logo_url: https://growclimate.com/favicon.ico
+
+collections:
+  # ========================================
+  # HOMEPAGE HERO & CTA SETTINGS
+  # ========================================
+  - name: "settings"
+    label: "Site Settings"
+    label_singular: "Setting"
+    folder: "src/data"
+    create: false
+    slug: "{{slug}}"
+    identifier_field: name
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "src/data/siteSettings.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Site Tagline", name: "tagline", widget: "string" }
+          - { label: "Company Name", name: "companyName", widget: "string" }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Street", name: "street", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Country", name: "country", widget: "string" }
+          - { label: "Social Media Links", name: "social", widget: "object", fields: [
+              { label: "LinkedIn", name: "linkedin", widget: "string", required: false },
+              { label: "Facebook", name: "facebook", widget: "string", required: false },
+              { label: "Twitter", name: "twitter", widget: "string", required: false }
+            ]}
+
+  # ========================================
+  # DEHUMIDIFIERS PRODUCTS
+  # ========================================
+  - name: "dehumidifiers"
+    label: "Dehumidifiers"
+    folder: "src/content/products/dehumidifiers"
+    create: true
+    slug: "{{fields.model}}"
+    preview_path: "/products#{{slug}}"
+    fields:
+      - { label: "Model Number", name: "model", widget: "string", hint: "e.g. RYCM-50C" }
+      - { label: "Series Name", name: "series", widget: "string", hint: "e.g. Commercial Dehumidifier" }
+      - { label: "Product Tagline", name: "tagline", widget: "string" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
+      - label: "Specifications"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Capacity", name: "capacity", widget: "string", hint: "e.g. 50L/day" }
+          - { label: "Power", name: "power", widget: "string" }
+          - { label: "Refrigerant", name: "refrigerant", widget: "string", required: false }
+          - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+          - { label: "Weight", name: "weight", widget: "string", required: false }
+          - { label: "Airflow", name: "airflow", widget: "string", required: false }
+          - { label: "Noise Level", name: "noise", widget: "string", required: false }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        field: { label: "Feature", name: "feature", widget: "string" }
+      - label: "Typical Applications"
+        name: "scenes"
+        widget: "list"
+        field: { label: "Application", name: "scene", widget: "string" }
+      - { label: "Datasheet PDF", name: "datasheet", widget: "file", required: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # HUMIDIFIERS PRODUCTS
+  # ========================================
+  - name: "humidifiers"
+    label: "Humidifiers"
+    folder: "src/content/products/humidifiers"
+    create: true
+    slug: "{{fields.model}}"
+    preview_path: "/products#humidifiers"
+    fields:
+      - { label: "Model Number", name: "model", widget: "string", hint: "e.g. UH-3L" }
+      - { label: "Series Name", name: "series", widget: "string", hint: "e.g. Ultrasonic Humidifier" }
+      - { label: "Product Tagline", name: "tagline", widget: "string" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
+      - label: "Specifications"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Capacity", name: "capacity", widget: "string", hint: "e.g. 3L/h" }
+          - { label: "Power", name: "power", widget: "string" }
+          - { label: "Mist Type", name: "mistType", widget: "string", required: false }
+          - { label: "Coverage Area", name: "coverage", widget: "string", required: false }
+          - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+          - { label: "Noise Level", name: "noise", widget: "string", required: false }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        field: { label: "Feature", name: "feature", widget: "string" }
+      - label: "Typical Applications"
+        name: "scenes"
+        widget: "list"
+        field: { label: "Application", name: "scene", widget: "string" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # VENTILATION PRODUCTS
+  # ========================================
+  - name: "ventilation"
+    label: "Ventilation"
+    label_singular: "Ventilation Product"
+    folder: "src/content/products/ventilation"
+    create: true
+    slug: "{{fields.model}}"
+    preview_path: "/products#ventilation"
+    fields:
+      - { label: "Model Number", name: "model", widget: "string", hint: "e.g. AC-3HP" }
+      - { label: "Series Name", name: "series", widget: "string", hint: "e.g. Air Conditioner" }
+      - { label: "Product Tagline", name: "tagline", widget: "string" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
+      - label: "Specifications"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Cooling Capacity", name: "cooling", widget: "string", required: false }
+          - { label: "Power", name: "power", widget: "string" }
+          - { label: "Refrigerant", name: "refrigerant", widget: "string", required: false }
+          - { label: "Airflow", name: "airflow", widget: "string", required: false }
+          - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+          - { label: "Noise Level", name: "noise", widget: "string", required: false }
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        field: { label: "Feature", name: "feature", widget: "string" }
+      - label: "Typical Applications"
+        name: "scenes"
+        widget: "list"
+        field: { label: "Application", name: "scene", widget: "string" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # APPLICATIONS / USE CASES
+  # ========================================
+  - name: "applications"
+    label: "Applications"
+    folder: "src/content/applications"
+    create: true
+    slug: "{{fields.slug}}"
+    preview_path: "/applications#{{fields.slug}}"
+    fields:
+      - { label: "Application Name", name: "name", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "Used in URL, e.g. greenhouse" }
+      - { label: "Emoji Icon", name: "emoji", widget: "string", default: "🌿" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
+      - { label: "Short Description", name: "shortDesc", widget: "string" }
+      - { label: "Full Description", name: "description", widget: "markdown" }
+      - label: "Recommended Products"
+        name: "products"
+        widget: "list"
+        field: { label: "Product Model", name: "product", widget: "string" }
+      - { label: "Benefits", name: "benefits", widget: "list", field: { label: "Benefit", name: "benefit", widget: "string" } }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # BLOG ARTICLES
+  # ========================================
+  - name: "blog"
+    label: "Blog Articles"
+    label_singular: "Blog Article"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{fields.slug}}"
+    preview_path: "/blog/{{fields.slug}}"
+    fields:
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "URL-friendly, e.g. humidity-control-tips" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Author", name: "author", widget: "string", default: "GrowClimate Team" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short summary for blog listing" }
+      - { label: "Category", name: "category", widget: "select", options: ["Industry News", "Technical Guide", "Case Study", "Product Updates", "Growing Tips"] }
+      - { label: "Tags", name: "tags", widget: "list", required: false, field: { label: "Tag", name: "tag", widget: "string" } }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Featured Article", name: "featured", widget: "boolean", default: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # CASE STUDIES
+  # ========================================
+  - name: "case_studies"
+    label: "Case Studies"
+    folder: "src/content/case-studies"
+    create: true
+    slug: "{{fields.slug}}"
+    preview_path: "/blog/{{fields.slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Client Name", name: "client", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Industry", name: "industry", widget: "string" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Equipment Used", name: "equipment", widget: "list", field: { label: "Equipment", name: "eq", widget: "string" } }
+      - { label: "Challenge", name: "challenge", widget: "markdown" }
+      - { label: "Solution", name: "solution", widget: "markdown" }
+      - { label: "Results", name: "results", widget: "markdown" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # CERTIFICATIONS
+  # ========================================
+  - name: "certifications"
+    label: "Certifications"
+    folder: "src/content/certifications"
+    create: true
+    slug: "{{fields.code}}"
+    fields:
+      - { label: "Certification Name", name: "name", widget: "string", hint: "e.g. CE, UL, ETL" }
+      - { label: "Certification Code", name: "code", widget: "string", hint: "Short code for slug" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Certification Logo", name: "logo", widget: "image", required: false }
+      - { label: "Valid Until", name: "validUntil", widget: "date", required: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ========================================
+  # TEAM MEMBERS (About Page)
+  # ========================================
+  - name: "team"
+    label: "Team Members"
+    folder: "src/content/team"
+    create: true
+    slug: "{{fields.name | slugify}}"
+    preview_path: "/about"
+    fields:
+      - { label: "Full Name", name: "name", widget: "string" }
+      - { label: "Job Title", name: "title", widget: "string" }
+      - { label: "Department", name: "department", widget: "select", options: ["Sales", "Engineering", "Support", "Management"] }
+      - { label: "Bio", name: "bio", widget: "text", required: false }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", default: 0, hint: "Display order on About page" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }

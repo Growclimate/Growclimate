@@ -1,0 +1,155 @@
+# Netlify CMS Configuration for GrowClimate Website
+# This file defines what content can be edited in the CMS admin panel
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Media storage (images uploaded in CMS go here)
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Editorial workflow (draft/review/publish)
+publish_mode: editorial_workflow
+
+# Site URL (update this to your actual domain after deployment)
+site_url: https://your-site.netlify.app
+display_url: https://your-site.netlify.app
+
+# Collections = content sections in the CMS
+collections:
+
+  # ─────────────────────────────────────────────
+  # Products — Dehumidifiers
+  # ─────────────────────────────────────────────
+  - name: "dehumidifiers"
+    label: "Products — Dehumidifiers"
+    label_singular: "Dehumidifier"
+    folder: "src/data/cms/products/"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: model
+    fields:
+      - { label: "Model Number", name: "model", widget: "string", hint: "e.g. RYCM-50C" }
+      - { label: "Series Name", name: "series", widget: "string", hint: "e.g. Commercial Dehumidifier" }
+      - { label: "Tagline", name: "tagline", widget: "string", hint: "One-line description for product cards" }
+      - { label: "Capacity", name: "capacity", widget: "string", hint: "e.g. 50L/day" }
+      - { label: "Power", name: "power", widget: "string", hint: "e.g. 680W" }
+      - { label: "Refrigerant", name: "refrigerant", widget: "string", hint: "e.g. R290 or N/A (Desiccant)" }
+      - { label: "Dimensions", name: "dimensions", widget: "string", hint: "e.g. 480×380×620mm" }
+      - { label: "Weight", name: "weight", widget: "string", hint: "e.g. 32kg" }
+      - { label: "Airflow", name: "airflow", widget: "string", hint: "e.g. 350m³/h" }
+      - { label: "Noise Level", name: "noise", widget: "string", hint: "e.g. ≤52dB" }
+      - { label: "Product Image URL", name: "image", widget: "string", hint: "URL to product image (use CDN or /images/uploads/filename.jpg)" }
+      - { label: "Application Scenes", name: "scenes", widget: "list", hint: "Where this product is typically used" }
+      - { label: "Key Features", name: "features", widget: "list", hint: "Bullet-point product features" }
+      - { label: "Selling Points (long description)", name: "sellingPoints", widget: "markdown", required: false, hint: "Detailed selling points shown on product detail" }
+      - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false, hint: "URL to PDF datasheet for download button" }
+
+  # ─────────────────────────────────────────────
+  # Products — Humidifiers
+  # ─────────────────────────────────────────────
+  - name: "humidifiers"
+    label: "Products — Humidifiers"
+    label_singular: "Humidifier"
+    folder: "src/data/cms/products/"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: model
+    fields:
+      - { label: "Model Number", name: "model", widget: "string" }
+      - { label: "Series Name", name: "series", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Capacity", name: "capacity", widget: "string", hint: "e.g. 3L/h" }
+      - { label: "Power", name: "power", widget: "string" }
+      - { label: "Mist Type", name: "mistType", widget: "string", hint: "e.g. Ultrasonic or Evaporative" }
+      - { label: "Dimensions", name: "dimensions", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "string" }
+      - label: "Coverage Area"
+        name: "coverage"
+        widget: "string"
+        hint: "e.g. 20-40m²"
+      - { label: "Noise Level", name: "noise", widget: "string" }
+      - { label: "Product Image URL", name: "image", widget: "string" }
+      - { label: "Application Scenes", name: "scenes", widget: "list" }
+      - { label: "Key Features", name: "features", widget: "list" }
+      - { label: "Selling Points", name: "sellingPoints", widget: "markdown", required: false }
+      - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
+
+  # ─────────────────────────────────────────────
+  # Products — Ventilation
+  # ─────────────────────────────────────────────
+  - name: "ventilation"
+    label: "Products — Fans & Ventilation"
+    label_singular: "Ventilation Product"
+    folder: "src/data/cms/products/"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: model
+    fields:
+      - { label: "Model Number", name: "model", widget: "string" }
+      - { label: "Series Name", name: "series", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Cooling Capacity", name: "cooling", widget: "string", required: false }
+      - { label: "Power", name: "power", widget: "string" }
+      - { label: "Refrigerant", name: "refrigerant", widget: "string" }
+      - { label: "Dimensions", name: "dimensions", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "string" }
+      - { label: "Airflow", name: "airflow", widget: "string" }
+      - { label: "Noise Level", name: "noise", widget: "string" }
+      - { label: "Product Image URL", name: "image", widget: "string" }
+      - { label: "Application Scenes", name: "scenes", widget: "list" }
+      - { label: "Key Features", name: "features", widget: "list" }
+      - { label: "Selling Points", name: "sellingPoints", widget: "markdown", required: false }
+      - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
+
+  # ─────────────────────────────────────────────
+  # Application Solutions (行业方案)
+  # ─────────────────────────────────────────────
+  - name: "applications"
+    label: "Application Solutions"
+    label_singular: "Application Solution"
+    folder: "src/data/cms/applications/"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: id
+    fields:
+      - { label: "ID (URL-safe)", name: "id", widget: "string", hint: "e.g. greenhouse, hydroponics" }
+      - { label: "Emoji Icon", name: "emoji", widget: "string", hint: "e.g. 🌿" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "textarea" }
+      - { label: "Recommended Products", name: "products", widget: "list", hint: "Model numbers e.g. RYCM-90C, UH-6L" }
+      - label: "Climate Targets"
+        name: "targets"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Value", name: "value", widget: "string" }
+
+  # ─────────────────────────────────────────────
+  # Company Info (可编辑的联系方式等)
+  # ─────────────────────────────────────────────
+  - name: "company"
+    label: "Company Info"
+    files:
+      - name: "contact"
+        label: "Contact Information"
+        file: "src/data/cms/company/contact.json"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Company Name", name: "companyName", widget: "string" }
+          - { label: "Business Hours", name: "businessHours", widget: "string" }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string", required: false }
+          - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string", required: false }
+      - name: "about"
+        label: "About Page Content"
+        file: "src/data/cms/company/about.json"
+        fields:
+          - { label: "About Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "About Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Story Paragraphs", name: "story", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "textarea" } }
+          - { label: "Certifications", name: "certs", widget: "list" }

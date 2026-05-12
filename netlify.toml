@@ -1,0 +1,51 @@
+[build]
+  # Build command
+  command = "npm install --ignore-scripts && node node_modules/esbuild/install.js && npm run build"
+  
+  # Build output directory
+  publish = "dist"
+  
+  # Build environment
+  environment = {
+    NODE_VERSION = "18"
+  }
+
+# Redirect all routes to index.html for SPA (Vue Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Prevent caching of index.html
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Netlify Functions (if needed in future)
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Enable Netlify CMS
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.images]
+  compress = true
+  formats = ["webp", "jpeg"]
+  quality = 80
