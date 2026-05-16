@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-
+  repo: Growclimate/Growclimate
 # This should be present when using Netlify Identity
 # local_backend: true  # Uncomment for local development
 
