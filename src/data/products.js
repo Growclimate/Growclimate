@@ -33,6 +33,22 @@ export const productCategories = [
 
 export const dehumidifierProducts = [
   {
+    id: 'gro-60l',
+    model: 'GRO-60L',
+    series: 'Commercial Dehumidifier',
+    tagline: 'Compact commercial dehumidifier for grow rooms and horticulture facilities.',
+    capacity: '60L/day',
+    power: '750W',
+    refrigerant: 'R290',
+    dimensions: '500×400×650mm',
+    weight: '38kg',
+    airflow: '400m³/h',
+    noise: '≤53dB',
+    image: '/images/products/RYCM-60C.jpg',
+    scenes: ['Indoor Grow Room', 'Greenhouse', 'Propagation Chamber', 'Mushroom Farm'],
+    features: ['R290 Eco Refrigerant', 'Auto Drain Pump', 'LED Display', 'CE Certified']
+  },
+  {
     id: 'rycm-50c',
     model: 'RYCM-50C',
     series: 'Commercial Dehumidifier',
@@ -44,7 +60,7 @@ export const dehumidifierProducts = [
     weight: '32kg',
     airflow: '350m³/h',
     noise: '≤52dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\9.主图LOGO\\主图\\RYCM-50C.jpg',
+    image: '/images/products/RYCM-50C.jpg',
     scenes: ['Indoor Grow Room', 'Small Greenhouse', 'Propagation Chamber'],
     features: ['R290 Eco Refrigerant', 'Micro-channel Condenser', 'Auto Drain Pump', 'CE/UL Certified']
   },
@@ -60,7 +76,7 @@ export const dehumidifierProducts = [
     weight: '48kg',
     airflow: '500m³/h',
     noise: '≤55dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\9.主图LOGO\\主图\\RYCM-90C.jpg',
+    image: '/images/products/RYCM-90C.jpg',
     scenes: ['Commercial Greenhouse', 'Mushroom Farm', 'Indoor Farm'],
     features: ['R410A Option Available', 'Digital Humidistat', 'Auto Restart', 'LED Display']
   },
@@ -76,8 +92,8 @@ export const dehumidifierProducts = [
     weight: '72kg',
     airflow: '750m³/h',
     noise: '≤58dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\4.商用除湿机Industrial dehumidifier\\1.自产R290&R410\\自产138L R410\\138 1.png',
-    scenes: ['Large Greenhouse', 'Warehouse Grow', 'Vertical Farm', 'Battery Storage Room'],
+    image: '/images/products/RYCM-138C.jpg',
+    scenes: ['Large Greenhouse', 'Warehouse Grow', 'Vertical Farm', 'Fruit Drying Room'],
     features: ['Industrial Scroll Compressor', 'Remote Humidistat', 'Modbus/RS485', 'CE/UL/ETL']
   },
   {
@@ -92,8 +108,8 @@ export const dehumidifierProducts = [
     weight: '95kg',
     airflow: '400m³/h',
     noise: '≤62dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\6.转轮除湿机\\1 新款100 200\\RY-100.jpg',
-    scenes: ['Pharmaceutical Cold Storage', 'Seed Drying Room', 'Battery Manufacturing'],
+    image: '/images/products/RY-100.jpg',
+    scenes: ['Seed Storage', 'Museum Archives', 'Pharmaceutical Cold Storage'],
     features: ['Silica Gel Rotor', 'Electric Heater', 'Process Air & Regeneration Air', 'PLC Control']
   },
   {
@@ -108,8 +124,8 @@ export const dehumidifierProducts = [
     weight: '145kg',
     airflow: '800m³/h',
     noise: '≤65dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\6.转轮除湿机\\1 新款100 200\\RY-200.jpg',
-    scenes: ['Seed Storage', 'Industrial Drying', 'Lithium Battery Facility'],
+    image: '/images/products/RY-200.jpg',
+    scenes: ['Seed Storage', 'Industrial Drying', 'Museum Archives'],
     features: ['High-Capacity Rotor', 'Industrial Fan', 'Auto Desiccant Regeneration', 'Touch Screen PLC']
   }
 ]
@@ -127,7 +143,7 @@ export const humidifierProducts = [
     weight: '3.5kg',
     coverage: '20-40m²',
     noise: '≤35dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\2.超声波加湿机Ultrasonic Humidifier\\1.YAKE 新款自制加湿机\\YAKE 3L humidifier .jpg',
+    image: '/images/products/UH-3L.jpg',
     scenes: ['Grow Tent', 'Hydroponics', 'Herb Garden', 'Small Greenhouse'],
     features: ['Ultrasonic Vibration', 'Adjustable Mist Output', 'Auto Humidity Control', 'Water Shortage Protection']
   },
@@ -143,7 +159,7 @@ export const humidifierProducts = [
     weight: '6kg',
     coverage: '50-80m²',
     noise: '≤38dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\2.超声波加湿机Ultrasonic Humidifier\\1.YAKE 新款自制加湿机\\1.jpg',
+    image: '/images/products/UH-6L.jpg',
     scenes: ['Medium Greenhouse', 'Hydroponic System', 'Tissue Culture Lab'],
     features: ['Dual Mist Heads', 'RS485 Compatible', 'Hygrostat Controlled', 'Stainless Steel Body']
   },
@@ -159,7 +175,7 @@ export const humidifierProducts = [
     weight: '18kg',
     coverage: '150-300m²',
     noise: '≤45dB',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\2.超声波加湿机Ultrasonic Humidifier\\1.YAKE 新款自制加湿机\\微信图片_20201215175135.jpg',
+    image: '/images/products/EH-12L.jpg',
     scenes: ['Large Greenhouse', 'Nursery', 'Indoor Farm'],
     features: ['Forced Draft Fan', 'Auto Water Inlet', 'Media Pad Filter', 'Multi-Unit Cascade']
   }
