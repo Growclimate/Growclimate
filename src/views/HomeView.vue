@@ -44,46 +44,6 @@
       </div>
     </section>
 
-    <!-- ===== PRODUCT CATEGORIES ===== -->
-    <section class="py-16 lg:py-24 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-dark-900 mb-4">Our Product Lines</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto text-lg">Three core product families designed to cover every climate control need in agricultural and industrial growing environments.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <RouterLink
-            v-for="cat in categories"
-            :key="cat.id"
-            :to="`/products/${cat.id}`"
-            class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
-          >
-            <div class="aspect-[4/3] overflow-hidden">
-              <img
-                :src="cat.coverImage"
-                :alt="cat.name"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-dark-900 mb-2">{{ cat.name }}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ cat.description }}</p>
-              <div class="flex flex-wrap gap-2">
-                <span v-for="app in cat.applications.slice(0,3)" :key="app" class="px-2.5 py-1 bg-brand-50 text-brand-700 text-xs font-medium rounded-full">{{ app }}</span>
-              </div>
-              <div class="mt-4 flex items-center text-brand-600 font-semibold text-sm group-hover:text-brand-700">
-                View All Products
-                <svg class="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </div>
-            </div>
-          </RouterLink>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== WHY CHOOSE US ===== -->
     <section class="py-16 lg:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,9 +179,7 @@
 
 <script setup>
 import { h } from 'vue'
-import { productCategories, applicationCases } from '@/data/products.js'
-
-const categories = productCategories
+import { applicationCases } from '@/data/products.js'
 
 const stats = [
   { value: '12+', label: 'Years Experience' },

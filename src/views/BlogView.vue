@@ -76,7 +76,7 @@ const featured = {
   slug: 'greenhouse-humidity-management-guide',
   title: 'Complete Guide to Greenhouse Humidity Management',
   category: 'Growing Science',
-  date: 'March 15, 2026',
+  date: 'May 20, 2026',
   image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
   excerpt: 'Learn how to balance humidity levels throughout the day-night cycle in greenhouse environments. This guide covers VPD calculation, dehumidifier sizing, and climate automation strategies for commercial growers.'
 }
@@ -86,49 +86,73 @@ const posts = [
     slug: 'vpd-explained',
     title: 'VPD Explained: The Key to Optimizing Plant Transpiration',
     category: 'Growing Science',
-    date: 'March 10, 2026',
+    date: 'May 18, 2026',
     image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80',
-    excerpt: 'Vapor Pressure Deficit is the most important yet misunderstood climate variable in controlled-environment agriculture. Here\'s how to calculate and use it.'
+    excerpt: 'Vapor Pressure Deficit is the most important yet misunderstood climate variable in controlled-environment agriculture. Here\'s how to calculate and use it for healthier plants and higher yields.'
   },
   {
     slug: 'desiccant-vs-compressor',
     title: 'Desiccant vs Compressor Dehumidifiers: How to Choose',
     category: 'Equipment Guide',
-    date: 'February 28, 2026',
+    date: 'May 15, 2026',
     image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',
-    excerpt: 'A detailed comparison of sorptive rotor dehumidifiers and compressor-based systems. Understanding dew point, ambient temperature, and energy efficiency trade-offs.'
+    excerpt: 'A detailed comparison of sorptive rotor dehumidifiers and compressor-based systems — understanding dew point, ambient temperature, and energy efficiency trade-offs.'
   },
   {
     slug: 'mushroom-farming-climate',
     title: 'Climate Control for Mushroom Farms: Why RH Above 85% Matters',
     category: 'Case Studies',
-    date: 'February 15, 2026',
+    date: 'May 10, 2026',
     image: 'https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=600&q=80',
-    excerpt: 'A walkthrough of the climate requirements for oyster, shiitake, and button mushroom cultivation, and how GrowClimate equipment achieves them.'
+    excerpt: 'A walkthrough of the climate requirements for oyster, shiitake, and button mushroom cultivation, and how GrowClimate equipment achieves them at commercial scale.'
   },
   {
     slug: 'fruit-drying-science',
-    title: 'The Science of Fruit Drying: How Controlled Climate Preserves Quality',
+    title: 'The Science of Fruit Drying: Controlled Climate for Premium Quality',
     category: 'Agricultural Applications',
-    date: 'January 30, 2026',
+    date: 'May 5, 2026',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    excerpt: 'Drying fruits and agricultural products requires precise control of temperature and humidity to achieve optimal moisture content, preserve nutrients, and prevent mold growth.'
+    excerpt: 'Drying fruits and agricultural products needs precise temperature and humidity control. Learn how modern dehumidification technology preserves nutrients and prevents spoilage.'
   },
   {
     slug: 'seed-storage-humidity',
-    title: 'The Science of Seed Storage: Keeping Viability for Decades',
+    title: 'Seed Storage Science: Maintaining Viability for Decades',
     category: 'Technical',
-    date: 'January 18, 2026',
+    date: 'April 28, 2026',
     image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80',
-    excerpt: 'Seed banks and germplasm libraries maintain seeds viable for 50+ years through precise temperature and humidity control. Here\'s the science and equipment behind it.'
+    excerpt: 'Seed banks maintain seeds viable for 50+ years through precise temperature and humidity control. Here\'s the science and equipment behind long-term seed preservation.'
   },
   {
-    slug: 'modbus-integration',
-    title: 'Integrating Dehumidifiers with Your Grow Automation System',
-    category: 'Technical',
-    date: 'January 5, 2026',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
-    excerpt: 'Step-by-step guide to connecting GrowClimate dehumidifiers to your BMS or grow controller via Modbus RS485. Includes register maps and sample code.'
+    slug: 'cannabis-drying-guide',
+    title: 'Cannabis Drying Room Design: Temperature, Humidity & Airflow Guide',
+    category: 'Industry Guide',
+    date: 'April 22, 2026',
+    image: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600&q=80',
+    excerpt: 'Post-harvest drying is where many cultivators lose quality. Learn the optimal drying room parameters, equipment sizing, and climate control strategies for premium flower preservation.'
+  },
+  {
+    slug: 'vertical-farming-humidity',
+    title: 'Vertical Farming Humidity: Challenges & Solutions for Multi-Layer Growing',
+    category: 'Growing Science',
+    date: 'April 15, 2026',
+    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&q=80',
+    excerpt: 'Multi-layer indoor farms face unique humidity challenges — heat stratification, microclimate variance between racks, and high planting density. Discover proven climate control strategies.'
+  },
+  {
+    slug: 'r290-refrigerant-guide',
+    title: 'Why R290 Is the Future of Greenhouse Dehumidification',
+    category: 'Sustainability',
+    date: 'April 8, 2026',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+    excerpt: 'R290 (propane) refrigerant has a GWP of just 3 — 675× lower than R410A. Learn why European and North American growers are switching to R290 dehumidifiers for compliance and performance.'
+  },
+  {
+    slug: 'energy-saving-dehumidification',
+    title: '5 Ways Commercial Growers Cut Dehumidification Energy Costs by 40%',
+    category: 'Energy Efficiency',
+    date: 'March 30, 2026',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80',
+    excerpt: 'Dehumidification is often the second-largest energy cost in greenhouses. These five strategies — from VPD-based control to heat recovery — deliver real savings without compromising crop quality.'
   },
 ]
 </script>

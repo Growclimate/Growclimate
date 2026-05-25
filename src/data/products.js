@@ -203,35 +203,35 @@ export const ventilationProducts = [
 export const applicationCases = [
   {
     id: 'case-1',
-    title: 'Nanjing Hengyu Seed Storage',
-    location: 'Nanjing, China',
-    equipment: 'RY-600M Desiccant Dehumidifier',
-    challenge: 'Seed cold storage required RH below 35% to prevent germination and mold growth.',
-    solution: 'Installed 4 units of RY-600M in cascade configuration, maintaining 28-32% RH year-round.',
-    result: 'Seed viability increased by 23%, zero mold incidents in 2 years.',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\案例图片\\转轮-南京恒裕仪器设备制造有限公司-种子冷库\\IMAG0767.jpg',
-    industry: 'Seed Storage'
+    title: 'Dutch Greenhouse Tomato Complex',
+    location: 'Westland, Netherlands',
+    equipment: 'GRO-385L × 4, GROW-12D × 6',
+    challenge: 'A 2-hectare glasshouse producing vine tomatoes year-round needed precise humidity control across 8 climate zones. Night RH spikes above 90% were causing Botrytis outbreaks, reducing Grade-A yield by 15%.',
+    solution: 'Deployed 4 GRO-385L floor-standing dehumidifiers with 6 GROW-12D humidifiers in a zoned cascade configuration. Full Modbus integration with the existing Priva climate computer for automated day/night RH setpoint management.',
+    result: 'Botrytis incidence reduced to below 2%, Grade-A yield increased 28%. Energy consumption for dehumidification dropped 22% vs previous compressor units thanks to variable-speed control.',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
+    industry: 'Greenhouse Vegetables'
   },
   {
     id: 'case-2',
-    title: 'Jiangxi Changhe Battery Facility',
-    location: 'Jiangxi, China',
-    equipment: 'RY-600M Industrial Dehumidifier',
-    challenge: 'Lithium battery production requires ultra-dry environments below 40% RH in assembly areas.',
-    solution: 'Custom RY-600M with stainless steel housing and Modbus integration for BMS monitoring.',
-    result: 'Production yield improved 18%, full BMS integration achieved.',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\案例图片\\转轮RY-600M-江西长河新电池有限公司-锂电池车间\\IMAG0222.jpg',
-    industry: 'Battery Manufacturing'
+    title: 'California Licensed Cannabis Facility',
+    location: 'Monterey County, California, USA',
+    equipment: 'GD-240L × 8, GRO-720L × 2',
+    challenge: 'A 4,500m² indoor cannabis cultivation facility required strict humidity control across flowering rooms (45-50% RH), vegetative rooms (60-65% RH), and drying rooms (50-55% RH). Existing compressor-based units couldn\'t maintain setpoints during peak summer heat.',
+    solution: 'Installed 8 GD-240L ceiling-mounted dehumidifiers across flowering and veg zones, and 2 GRO-720L floor-standing units for the post-harvest drying facility. All units integrated into the facility\'s TrolMaster Hydro-X Pro control system via Modbus RS485.',
+    result: 'RH maintained within ±3% of target across all zones year-round. Drying cycle time reduced by 1.5 days. Zero crop loss due to humidity-related mold in 18 months of operation.',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    industry: 'Cannabis Cultivation'
   },
   {
     id: 'case-3',
-    title: 'Guangzhou Airport Terminal',
-    location: 'Guangzhou, China',
-    equipment: 'RY-600 × 2 Units',
-    challenge: 'Underground tunnel sections faced severe condensation issues affecting infrastructure.',
-    solution: 'Ducted RY-600 units with custom condensation collection and automated drainage.',
-    result: 'RH consistently maintained below 50%, condensation eliminated.',
-    image: 'D:\\汪珍妮-工作资料\\1.产品图片\\案例图片\\转轮600-广州飞机场\\600串联1.jpg',
-    industry: 'Infrastructure'
+    title: 'Nordic Seed Vault Preservation',
+    location: 'Stockholm, Sweden',
+    equipment: 'GROW-1100M × 3, GROW-580 × 4',
+    challenge: 'A national germplasm bank storing 150,000 seed accessions required ultra-low humidity (20-25% RH) at 4°C in their long-term storage vaults. Standard compressor dehumidifiers failed at low temperatures, causing frost buildup and unreliable humidity control.',
+    solution: 'Implemented 3 GROW-1100M desiccant dehumidifiers for the main vault, with 4 GROW-580 units for the processing and packaging areas. The desiccant rotor technology operates effectively at sub-ambient temperatures where compressor units cannot function.',
+    result: 'RH maintained at 22% ±2% in main vaults. Zero frost-related equipment failures in 3 years. Seed viability testing confirmed germination rates unchanged after 24 months — meeting ISTA (International Seed Testing Association) standards.',
+    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80',
+    industry: 'Seed Banking'
   }
 ]

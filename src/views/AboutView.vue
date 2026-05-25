@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-8 lg:p-12">
-            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80" alt="Climate control engineering" class="rounded-xl shadow-lg w-full" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="GrowClimate greenhouse climate control engineering" class="rounded-xl shadow-lg w-full" loading="lazy" />
           </div>
         </div>
       </div>

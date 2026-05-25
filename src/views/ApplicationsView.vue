@@ -40,12 +40,8 @@
           </div>
 
           <div :class="index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''">
-            <div class="rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-brand-50 to-brand-100 aspect-[4/3] flex items-center justify-center">
-              <div class="text-center p-8">
-                <div class="text-6xl mb-4">{{ app.emoji }}</div>
-                <h3 class="text-xl font-bold text-dark-900">{{ app.title }}</h3>
-                <p class="text-gray-600 text-sm mt-2">{{ app.subtitle }}</p>
-              </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+              <img :src="app.image" :alt="app.title" class="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -74,8 +70,9 @@ const applications = [
     emoji: '🌿',
     title: 'Greenhouse Climate Control',
     subtitle: 'Precision humidity & temperature for glasshouse environments',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
     description: 'Modern greenhouses face complex microclimate challenges — temperature stratification, high humidity during night cycles, and rapid evaporation in summer. GrowClimate systems provide 24/7 automated climate regulation, keeping canopy-level humidity between 60–80% RH regardless of outdoor conditions.',
-    products: ['RYCM-90C', 'RYCM-138C', 'UH-6L', 'EH-12L'],
+    products: ['GROW-120', 'GRO-385L', 'GROW-12D', 'GROW-24D'],
     targets: [
       { label: 'Target RH', value: '60–80%' },
       { label: 'Target Temp', value: '18–28°C' },
@@ -88,8 +85,9 @@ const applications = [
     emoji: '💧',
     title: 'Hydroponics & Soilless Growing',
     subtitle: 'Stable root zone environment for maximum yield',
+    image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&q=80',
     description: 'Hydroponic systems demand exceptionally stable relative humidity — too high and you risk Pythium root rot; too low and transpiration stress reduces nutrient uptake. Our precision humidifiers maintain 65–75% RH with ±2% accuracy, ensuring consistent VPD (Vapor Pressure Deficit) for maximum photosynthetic efficiency.',
-    products: ['UH-3L', 'UH-6L', 'RYCM-50C'],
+    products: ['GROW-03L', 'GROW-06D', 'GROW-60', 'GROW-90'],
     targets: [
       { label: 'Target RH', value: '65–75%' },
       { label: 'VPD Range', value: '0.4–0.8 kPa' },
@@ -102,8 +100,9 @@ const applications = [
     emoji: '🍄',
     title: 'Mushroom Cultivation',
     subtitle: 'High humidity mycology climate systems',
-    description: 'Mushrooms require sustained 80–95% RH across all growth phases — from spawn run through fruiting. Our heavy-capacity humidifiers combined with RYCM industrial dehumidifiers create a closed-loop humidity system that prevents condensation on walls and substrates while maximizing fruiting body development.',
-    products: ['EH-12L', 'UH-6L', 'RYCM-138C'],
+    image: 'https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=800&q=80',
+    description: 'Mushrooms require sustained 80–95% RH across all growth phases — from spawn run through fruiting. Our heavy-capacity humidifiers combined with industrial dehumidifiers create a closed-loop humidity system that prevents condensation on walls and substrates while maximizing fruiting body development.',
+    products: ['GROW-24D', 'GROW-15D', 'GRO-288L', 'GRO-385L'],
     targets: [
       { label: 'Target RH', value: '80–95%' },
       { label: 'Fruiting RH', value: '87–93%' },
@@ -114,12 +113,13 @@ const applications = [
   {
     id: 'seed-storage',
     emoji: '🌱',
-    title: 'Seed Storage',
-    subtitle: 'Long-term seed viability preservation',
-    description: 'Maintaining seed viability for years requires strict control of both temperature and humidity. GrowClimate desiccant rotor dehumidifiers achieve and maintain RH below 35% in cold storage environments where compressor dehumidifiers fail. Our RY-100 and RY-200 series are the backbone of seed banks and germplasm libraries worldwide.',
-    products: ['RY-100', 'RY-200'],
+    title: 'Seed Storage & Germplasm Preservation',
+    subtitle: 'Long-term seed viability through precision climate control',
+    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80',
+    description: 'Maintaining seed viability for decades requires strict control of both temperature and humidity. GrowClimate desiccant rotor dehumidifiers achieve and maintain RH below 30% in cold storage environments where compressor dehumidifiers fail. Our GROW-580 and GROW-1100M series are the backbone of seed banks and germplasm libraries worldwide.',
+    products: ['GROW-580', 'GROW-1100M', 'GROW-1550M'],
     targets: [
-      { label: 'Target RH', value: '25–35%' },
+      { label: 'Target RH', value: '20–30%' },
       { label: 'Temp Range', value: '2–8°C' },
       { label: 'Dew Point', value: '<-5°C' },
       { label: 'Uptime', value: '99.5% Required' },
@@ -128,15 +128,16 @@ const applications = [
   {
     id: 'fruit-drying',
     emoji: '🥭',
-    title: 'Fruit Drying & Preservation',
+    title: 'Fruit Drying & Agricultural Preservation',
     subtitle: 'Controlled drying for dried fruit and agricultural products',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
     description: 'Drying fruits and agricultural products requires precise control of temperature and humidity to achieve optimal moisture content, preserve nutrients, and prevent mold growth. GrowClimate dehumidifiers with integrated heating provide consistent drying conditions across all climates — from tropical mangoes to temperate apples.',
-    products: ['RY-100', 'RY-200', 'RYCM-138C'],
+    products: ['GRO-720L', 'GROW-1100M', 'GRO-960L'],
     targets: [
       { label: 'Drying RH', value: '30–45%' },
       { label: 'Drying Temp', value: '35–55°C' },
       { label: 'Final MC', value: '10–15% (fruit)' },
-      { label: 'Airflow', value: '400–800 m³/h' },
+      { label: 'Airflow', value: '1800–10000 m³/h' },
     ]
   },
 ]
