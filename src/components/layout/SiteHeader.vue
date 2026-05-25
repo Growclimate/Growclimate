@@ -5,10 +5,13 @@
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center space-x-2 flex-shrink-0" @click="closeMobile">
           <div class="w-9 h-9 bg-brand-600 rounded-lg flex items-center justify-center">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7z" fill="white"/>
-              <path d="M9 21v1h6v-1H9z" fill="white" opacity="0.7"/>
-              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z" fill="white"/>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Sprout/Growing Plant Logo for GrowClimate -->
+              <path d="M12 22V12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 12C12 12 8 8 7 5C6 2 8 0 11 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.3"/>
+              <path d="M12 12C12 12 16 8 17 5C18 2 16 0 13 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.3"/>
+              <path d="M12 12C12 12 9 9 7 10" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="white" fill-opacity="0.25"/>
+              <path d="M12 12C12 12 15 9 17 10" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="white" fill-opacity="0.25"/>
             </svg>
           </div>
           <div>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ac-3hp",
+    "model": "AC-3HP",
+    "series": "Air Conditioner / Cooler",
+    "tagline": "3HP industrial air conditioner for climate-controlled grow rooms.",
+    "cooling": "8.5kW",
+    "power": "3.2kW",
+    "refrigerant": "R410A",
+    "dimensions": "900×500×1100mm",
+    "weight": "85kg",
+    "airflow": "1200m³/h",
+    "noise": "≤55dB",
+    "image": "/images/products/AC-3HP.jpg",
+    "scenes": ["Climate-Controlled Grow Room", "Container Farm", "Vertical Farm"],
+    "features": ["Precise Temp Control ±0.5°C", "R410A Eco", "CE Certified", "Remote Control"],
+    "sellingPoints": "The AC-3HP provides precise temperature control within ±0.5°C of setpoint — critical for climate-sensitive crops and research environments. The eco-friendly R410A refrigerant complies with EU F-Gas regulations while delivering reliable cooling capacity. CE certification ensures compliance for European market access.",
+    "datasheet": "/datasheets/products/AC-3HP.pdf"
+  }
+]

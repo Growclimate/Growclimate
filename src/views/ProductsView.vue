@@ -49,13 +49,16 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl overflow-hidden mb-6">
+        <!-- Dynamic Product Cards for Portable -->
+        <div v-if="portableProducts.length > 0" class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl overflow-hidden mb-6">
           <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="bg-gray-100 aspect-square lg:aspect-auto flex items-center justify-center min-h-[260px]">
-              <div class="text-center p-8">
-                <div class="text-5xl mb-3">💧</div>
-                <p class="text-gray-500 text-sm">RYCM-50C / RYCM-90C</p>
-              </div>
+            <div class="bg-gray-50 flex items-center justify-center min-h-[260px] p-6">
+              <img
+                :src="portableProducts[0].image"
+                :alt="portableProducts[0].model"
+                class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                @error="$event.target.style.display='none'"
+              />
             </div>
             <div class="p-6 lg:p-8">
               <h3 class="text-lg font-bold text-dark-900 mb-4">Specifications</h3>
@@ -64,17 +67,19 @@
                   <thead>
                     <tr class="border-b border-brand-200">
                       <th class="py-2 pr-4 text-left font-semibold text-dark-900">Parameter</th>
-                      <th class="py-2 px-2 text-center font-semibold text-dark-900">RYCM-50C</th>
-                      <th class="py-2 pl-4 text-center font-semibold text-dark-900">RYCM-90C</th>
+                      <th v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-semibold text-dark-900">{{ product.model }}</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-gray-100">
-                    <tr><td class="py-2 pr-4 text-gray-600">Capacity</td><td class="py-2 px-2 text-center font-medium text-dark-900">50L/day</td><td class="py-2 pl-4 text-center font-medium text-dark-900">90L/day</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-600">Power</td><td class="py-2 px-2 text-center font-medium text-dark-900">680W</td><td class="py-2 pl-4 text-center font-medium text-dark-900">1050W</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-600">Refrigerant</td><td class="py-2 px-2 text-center font-medium text-dark-900">R290</td><td class="py-2 pl-4 text-center font-medium text-dark-900">R290</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-600">Airflow</td><td class="py-2 px-2 text-center font-medium text-dark-900">350m³/h</td><td class="py-2 pl-4 text-center font-medium text-dark-900">500m³/h</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-600">Noise</td><td class="py-2 px-2 text-center font-medium text-dark-900">≤52dB</td><td class="py-2 pl-4 text-center font-medium text-dark-900">≤55dB</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-600">Dimensions</td><td class="py-2 px-2 text-center font-medium text-dark-900 text-xs">480×380×620mm</td><td class="py-2 pl-4 text-center font-medium text-dark-900 text-xs">560×450×780mm</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Capacity</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.capacity }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Power</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.power }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Power Supply</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.powerSupply }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Refrigerant</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.refrigerant }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Max. Current</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.maxCurrent }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Airflow</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.airflow }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Water Tank</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900 text-xs">{{ product.waterTank }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Dimensions</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900 text-xs">{{ product.dimensions }}</td></tr>
+                    <tr><td class="py-2 pr-4 text-gray-600">Weight</td><td v-for="product in portableProducts" :key="product.id" class="py-2 px-2 text-center font-medium text-dark-900">{{ product.weight }}</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -147,27 +152,59 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl overflow-hidden mb-6 shadow-sm border border-gray-100">
+        <!-- Dynamic Floor Product -->
+        <div v-if="floorProducts.length > 0" class="bg-white rounded-2xl overflow-hidden mb-6 shadow-sm border border-gray-100">
           <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="bg-gray-50 aspect-square lg:aspect-auto flex items-center justify-center min-h-[260px]">
-              <div class="text-center p-8">
-                <div class="text-5xl mb-3">🏭</div>
-                <p class="text-gray-500 text-sm">RYCM-138C</p>
-              </div>
+            <div class="bg-gray-50 flex items-center justify-center min-h-[260px] p-6">
+              <img
+                :src="floorProducts[0].image"
+                :alt="floorProducts[0].model"
+                class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                @error="$event.target.style.display='none'"
+              />
             </div>
             <div class="p-6 lg:p-8">
-              <h3 class="text-lg font-bold text-dark-900 mb-4">Specifications</h3>
-              <table class="w-full text-sm">
-                <tbody class="divide-y divide-gray-100">
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Model</td><td class="py-2.5 pl-4 text-center font-bold text-dark-900">RYCM-138C</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Capacity</td><td class="py-2.5 pl-4 text-center font-medium text-dark-900">138L/day</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Power</td><td class="py-2.5 pl-4 text-center font-medium text-dark-900">1500W</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Refrigerant</td><td class="py-2.5 pl-4 text-center font-medium text-dark-900">R410A</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Airflow</td><td class="py-2.5 pl-4 text-center font-medium text-dark-900">750m³/h</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Noise</td><td class="py-2.5 pl-4 text-center font-medium text-dark-900">≤58dB</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-600 font-medium">Dimensions</td><td class="py-2.5 pl-4 text-center font-medium text-dark-900 text-xs">680×520×920mm</td></tr>
-                </tbody>
-              </table>
+              <h3 class="text-lg font-bold text-dark-900 mb-4">Specifications — GRO Floor Series</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="border-b border-gray-200">
+                      <th class="py-2 pr-3 text-left font-semibold text-dark-900 whitespace-nowrap">Model</th>
+                      <th v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-semibold text-dark-900 whitespace-nowrap">{{ p.model }}</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100">
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Capacity</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.capacity }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Power Supply</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.powerSupply }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Refrigerant</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.refrigerant }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Max. Power</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.power }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Airflow</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.airflow }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Dimensions</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.dimensions }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Weight</td>
+                      <td v-for="p in floorProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.weight }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -238,40 +275,94 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Coming Soon Card -->
-        <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 text-center mb-6">
-          <div class="text-4xl mb-3">🏗️</div>
-          <h3 class="text-xl font-bold text-dark-900 mb-2">Standard Series Coming Soon</h3>
-          <p class="text-gray-600 text-sm max-w-md mx-auto">
-            Our ceiling duct dehumidifier series is currently in development. Contact us to discuss custom ducted solutions or OEM configurations for your facility.
-          </p>
-        </div>
-
-        <div class="bg-gray-50 rounded-2xl p-6 lg:p-8 mb-6">
-          <h3 class="text-lg font-bold text-dark-900 mb-4">Custom Ducted Solutions — Available Now</h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-5">
-            While our standard ceiling duct series is under development, we offer custom-engineered ducted dehumidification systems for large-scale projects. Our engineering team designs fully integrated solutions tailored to your facility layout and airflow requirements.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-            <div class="bg-white rounded-xl p-4">
-              <h4 class="font-bold text-dark-900 mb-1.5 text-sm">Custom Engineering</h4>
-              <p class="text-gray-600 text-xs leading-relaxed">Full ducting design, CFD airflow simulation, and installation guidance for your specific facility layout.</p>
+        <!-- Product Image + Specs Card -->
+        <div v-if="ceilingProducts.length > 0" class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl overflow-hidden mb-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <!-- Product Image -->
+            <div class="bg-gray-50 flex items-center justify-center min-h-[280px] p-6">
+              <img
+                :src="ceilingProducts[0].image"
+                :alt="ceilingProducts[0].model"
+                class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                @error="$event.target.style.display='none'"
+              />
             </div>
-            <div class="bg-white rounded-xl p-4">
-              <h4 class="font-bold text-dark-900 mb-1.5 text-sm">OEM / Private Label</h4>
-              <p class="text-gray-600 text-xs leading-relaxed">Custom aesthetics, branding, and performance parameters. Build-to-order for volume projects.</p>
+            <!-- Full Spec Table: all ceiling models -->
+            <div class="p-6 lg:p-8">
+              <h3 class="text-lg font-bold text-dark-900 mb-4">Specifications — GD Series</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="border-b border-brand-200">
+                      <th class="py-2 pr-3 text-left font-semibold text-dark-900 whitespace-nowrap">Model</th>
+                      <th v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-semibold text-dark-900 whitespace-nowrap">{{ p.model }}</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100">
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Capacity</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.capacity }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Power Supply</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.powerSupply }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Refrigerant</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.refrigerant }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Max. Power</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.power }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Airflow</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.airflow }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Dimensions</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.dimensions }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-600 whitespace-nowrap">Weight</td>
+                      <td v-for="p in ceilingProducts" :key="p.id" class="py-2 px-1.5 text-center font-medium text-dark-900 whitespace-nowrap">{{ p.weight }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-          <RouterLink
-            to="/contact"
-            class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
-          >
-            Request Custom Engineering Quote
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-            </svg>
-          </RouterLink>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-gray-50 rounded-xl p-4">
+            <h4 class="font-bold text-dark-900 mb-1.5 text-sm">Space-Saving Ceiling Installation</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">Installed overhead, GD series units keep the entire growing floor free — no footprint, no obstruction to plant canopy access.</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4">
+            <h4 class="font-bold text-dark-900 mb-1.5 text-sm">Duct Integration Ready</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">All models support ducted air distribution for uniform humidity across multi-zone growing areas. Custom duct configurations available.</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4">
+            <h4 class="font-bold text-dark-900 mb-1.5 text-sm">Modbus / Controller</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">Every GD model includes integrated Modbus RS485 for BMS integration and centralized multi-unit climate automation.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs font-semibold text-gray-500 self-center mr-1">Typical Applications:</span>
+          <span v-for="scene in ceilingScenes" :key="scene" class="px-3 py-1 bg-brand-50 border border-brand-100 text-brand-700 text-xs rounded-full">{{ scene }}</span>
+        </div>
+
+        <RouterLink
+          to="/contact"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
+        >
+          Request a Quote
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </RouterLink>
       </div>
     </section>
 
@@ -299,31 +390,64 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-br from-gray-900 to-dark-800 rounded-2xl overflow-hidden mb-6 text-white">
+        <!-- Dynamic Desiccant Products -->
+        <div v-if="desiccantProducts.length > 0" class="bg-gradient-to-br from-gray-900 to-dark-800 rounded-2xl overflow-hidden mb-6 text-white">
           <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="bg-gray-800 aspect-square lg:aspect-auto flex items-center justify-center min-h-[260px]">
-              <div class="text-center p-8">
-                <div class="text-5xl mb-3">⚙️</div>
-                <p class="text-gray-400 text-sm">RY-100 / RY-200 Series</p>
-              </div>
+            <div class="bg-gray-800 flex items-center justify-center min-h-[260px] p-6">
+              <img
+                :src="desiccantProducts[0].image"
+                :alt="desiccantProducts[0].model"
+                class="max-h-64 max-w-full object-contain rounded-xl"
+                @error="$event.target.style.display='none'"
+              />
             </div>
             <div class="p-6 lg:p-8">
-              <h3 class="text-lg font-bold mb-4">Specifications</h3>
+              <h3 class="text-lg font-bold mb-4">Specifications — GROW Desiccant Series</h3>
               <div class="overflow-x-auto">
-                <table class="w-full text-sm">
+                <table class="w-full text-xs">
                   <thead>
                     <tr class="border-b border-gray-700">
-                      <th class="py-2 pr-4 text-left font-semibold text-gray-300">Parameter</th>
-                      <th class="py-2 px-2 text-center font-semibold text-gray-300">RY-100</th>
-                      <th class="py-2 pl-4 text-center font-semibold text-gray-300">RY-200</th>
+                      <th class="py-2 pr-3 text-left font-semibold text-gray-300 whitespace-nowrap">Model</th>
+                      <th v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-semibold text-gray-300 whitespace-nowrap">{{ product.model }}</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-gray-700">
-                    <tr><td class="py-2 pr-4 text-gray-400">Capacity</td><td class="py-2 px-2 text-center font-medium text-white">5kg/h</td><td class="py-2 pl-4 text-center font-medium text-white">10kg/h</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-400">Power</td><td class="py-2 px-2 text-center font-medium text-white">3.5kW</td><td class="py-2 pl-4 text-center font-medium text-white">6.5kW</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-400">Airflow</td><td class="py-2 px-2 text-center font-medium text-white">400m³/h</td><td class="py-2 pl-4 text-center font-medium text-white">800m³/h</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-400">Noise</td><td class="py-2 px-2 text-center font-medium text-white">≤62dB</td><td class="py-2 pl-4 text-center font-medium text-white">≤65dB</td></tr>
-                    <tr><td class="py-2 pr-4 text-gray-400">Control</td><td class="py-2 px-2 text-center font-medium text-white">Button Panel</td><td class="py-2 pl-4 text-center font-medium text-white">Touchscreen PLC</td></tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Rated Power</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.ratedPower }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Power Supply</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.powerSupply }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Rated Current</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.ratedCurrent }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Process Airflow</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.processAirflow }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Static Pressure</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.processStaticPressure }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Regen Airflow</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.regenAirflow }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Operating Temp</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.operatingTemp }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Dimensions</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.dimensions }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 text-gray-400 whitespace-nowrap">Weight</td>
+                      <td v-for="product in desiccantProducts" :key="product.id" class="py-2 px-1.5 text-center font-medium text-white whitespace-nowrap">{{ product.weight }}</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -353,7 +477,7 @@
 
         <a
           v-if="desiccantDatasheet"
-          :href="desiccantDatasheet"
+          :href="desicnantDatasheet"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-5 py-2.5 bg-dark-900 hover:bg-dark-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
@@ -371,6 +495,9 @@
         </span>
       </div>
     </section>
+
+    <!-- Divider -->
+    <div class="max-w-7xl mx-auto px-4"><div class="border-t border-gray-200"></div></div>
 
     <!-- ═══════════════════════════════════════════════════ -->
     <!-- SECTION 5: HUMIDIFIERS                           -->
@@ -393,76 +520,58 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Humidifiers Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-          <!-- UH-3L -->
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden">
-            <div class="aspect-square bg-gray-100 flex items-center justify-center min-h-[200px]">
-              <div class="text-center p-6">
-                <div class="text-5xl mb-3">🌫️</div>
-                <p class="text-gray-500 text-sm">UH-3L Ultrasonic</p>
-              </div>
+        <!-- Single Image + Full Spec Table -->
+        <div v-if="humidifiersData.length > 0" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden mb-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="bg-gray-50 flex items-center justify-center min-h-[260px] p-6">
+              <img
+                :src="humidifiersData[0].image"
+                :alt="humidifiersData[0].model"
+                class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                @error="$event.target.style.display='none'"
+              />
             </div>
-            <div class="p-5">
-              <h3 class="text-lg font-bold text-dark-900 mb-2">UH-3L</h3>
-              <p class="text-gray-600 text-sm mb-3">Compact ultrasonic misting unit for small grow tents and herb gardens.</p>
-              <div class="grid grid-cols-2 gap-2 text-xs">
-                <div><span class="text-gray-500">Capacity:</span> <span class="font-medium">3L/h</span></div>
-                <div><span class="text-gray-500">Power:</span> <span class="font-medium">180W</span></div>
-                <div><span class="text-gray-500">Coverage:</span> <span class="font-medium">20-40m²</span></div>
-                <div><span class="text-gray-500">Noise:</span> <span class="font-medium">≤35dB</span></div>
-              </div>
-              <div class="mt-3 flex flex-wrap gap-1">
-                <span class="px-2 py-0.5 bg-white text-blue-700 text-xs rounded-full">Ultrasonic</span>
-                <span class="px-2 py-0.5 bg-white text-blue-700 text-xs rounded-full">Auto Humidity</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- UH-6L -->
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden">
-            <div class="aspect-square bg-gray-100 flex items-center justify-center min-h-[200px]">
-              <div class="text-center p-6">
-                <div class="text-5xl mb-3">🌫️</div>
-                <p class="text-gray-500 text-sm">UH-6L Ultrasonic</p>
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-bold text-dark-900 mb-2">UH-6L</h3>
-              <p class="text-gray-600 text-sm mb-3">Mid-range ultrasonic unit with dual mist heads for larger growing areas.</p>
-              <div class="grid grid-cols-2 gap-2 text-xs">
-                <div><span class="text-gray-500">Capacity:</span> <span class="font-medium">6L/h</span></div>
-                <div><span class="text-gray-500">Power:</span> <span class="font-medium">360W</span></div>
-                <div><span class="text-gray-500">Coverage:</span> <span class="font-medium">50-80m²</span></div>
-                <div><span class="text-gray-500">Noise:</span> <span class="font-medium">≤38dB</span></div>
-              </div>
-              <div class="mt-3 flex flex-wrap gap-1">
-                <span class="px-2 py-0.5 bg-white text-blue-700 text-xs rounded-full">Dual Mist</span>
-                <span class="px-2 py-0.5 bg-white text-blue-700 text-xs rounded-full">RS485</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- EH-12L -->
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden">
-            <div class="aspect-square bg-gray-100 flex items-center justify-center min-h-[200px]">
-              <div class="text-center p-6">
-                <div class="text-5xl mb-3">💧</div>
-                <p class="text-gray-500 text-sm">EH-12L Evaporative</p>
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-bold text-dark-900 mb-2">EH-12L</h3>
-              <p class="text-gray-600 text-sm mb-3">High-volume evaporative humidifier for large-scale greenhouse operations.</p>
-              <div class="grid grid-cols-2 gap-2 text-xs">
-                <div><span class="text-gray-500">Capacity:</span> <span class="font-medium">12L/h</span></div>
-                <div><span class="text-gray-500">Power:</span> <span class="font-medium">550W</span></div>
-                <div><span class="text-gray-500">Coverage:</span> <span class="font-medium">150-300m²</span></div>
-                <div><span class="text-gray-500">Noise:</span> <span class="font-medium">≤45dB</span></div>
-              </div>
-              <div class="mt-3 flex flex-wrap gap-1">
-                <span class="px-2 py-0.5 bg-white text-blue-700 text-xs rounded-full">Evaporative</span>
-                <span class="px-2 py-0.5 bg-white text-blue-700 text-xs rounded-full">Cascade</span>
+            <div class="p-4 lg:p-6">
+              <h3 class="text-lg font-bold text-dark-900 mb-4">Specifications — GROW Humidifier Series</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="border-b border-blue-200">
+                      <th class="py-2 pr-2 text-left font-semibold text-dark-900 whitespace-nowrap">Model</th>
+                      <th v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-semibold text-dark-900 whitespace-nowrap">{{ product.model }}</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100">
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Capacity</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.capacity }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Power</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.power }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Voltage</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.voltage }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Air Volume</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.airVolume }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Steam Vent</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.steamVent }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Coverage</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.coverage }}</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-2 text-gray-600 whitespace-nowrap">Weight</td>
+                      <td v-for="product in humidifiersData" :key="product.id" class="py-2 px-1 text-center font-medium text-dark-900 whitespace-nowrap">{{ product.weight }}</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -489,10 +598,10 @@
         </div>
 
         <RouterLink
-          to="/products/humidifiers"
+          to="/contact"
           class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
         >
-          View Humidifiers
+          Request a Quote
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -524,25 +633,25 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- AC-3HP -->
-        <div class="bg-gradient-to-br from-gray-900 to-dark-800 rounded-2xl overflow-hidden mb-6 text-white">
+        <!-- Dynamic Ventilation Product -->
+        <div v-if="ventilationData.length > 0" class="bg-gradient-to-br from-gray-900 to-dark-800 rounded-2xl overflow-hidden mb-6 text-white">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="bg-gray-800 aspect-square lg:aspect-auto flex items-center justify-center min-h-[260px]">
               <div class="text-center p-8">
                 <div class="text-5xl mb-3">❄️</div>
-                <p class="text-gray-400 text-sm">AC-3HP Industrial</p>
+                <p class="text-gray-400 text-sm">{{ ventilationData[0]?.model }} Industrial</p>
               </div>
             </div>
             <div class="p-6 lg:p-8">
-              <h3 class="text-lg font-bold mb-4">AC-3HP Air Conditioner / Cooler</h3>
+              <h3 class="text-lg font-bold mb-4">{{ ventilationData[0]?.model }} {{ ventilationData[0]?.series }}</h3>
               <table class="w-full text-sm">
                 <tbody class="divide-y divide-gray-700">
-                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Cooling Capacity</td><td class="py-2.5 pl-4 text-center font-medium text-white">8.5kW</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Power Input</td><td class="py-2.5 pl-4 text-center font-medium text-white">3.2kW</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Refrigerant</td><td class="py-2.5 pl-4 text-center font-medium text-white">R410A</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Airflow</td><td class="py-2.5 pl-4 text-center font-medium text-white">1200m³/h</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Noise Level</td><td class="py-2.5 pl-4 text-center font-medium text-white">≤55dB</td></tr>
-                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Dimensions</td><td class="py-2.5 pl-4 text-center font-medium text-white">900×500×1100mm</td></tr>
+                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Cooling Capacity</td><td class="py-2.5 pl-4 text-center font-medium text-white">{{ ventilationData[0]?.cooling }}</td></tr>
+                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Power Input</td><td class="py-2.5 pl-4 text-center font-medium text-white">{{ ventilationData[0]?.power }}</td></tr>
+                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Refrigerant</td><td class="py-2.5 pl-4 text-center font-medium text-white">{{ ventilationData[0]?.refrigerant }}</td></tr>
+                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Airflow</td><td class="py-2.5 pl-4 text-center font-medium text-white">{{ ventilationData[0]?.airflow }}</td></tr>
+                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Noise Level</td><td class="py-2.5 pl-4 text-center font-medium text-white">{{ ventilationData[0]?.noise }}</td></tr>
+                  <tr><td class="py-2.5 pr-4 text-gray-400 font-medium">Dimensions</td><td class="py-2.5 pl-4 text-center font-medium text-white">{{ ventilationData[0]?.dimensions }}</td></tr>
                 </tbody>
               </table>
             </div>
@@ -596,7 +705,30 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { dehumidifiers, humidifiers, ventilation } from '../data/cms/index.js'
+
+// Load CMS data
+const dehumidifiersData = dehumidifiers
+const humidifiersData = humidifiers
+const ventilationData = ventilation
+
+// Filter products by category
+const portableProducts = computed(() => 
+  dehumidifiersData.filter(p => p.category === 'portable')
+)
+
+const floorProducts = computed(() => 
+  dehumidifiersData.filter(p => p.category === 'floor')
+)
+
+const ceilingProducts = computed(() => 
+  dehumidifiersData.filter(p => p.category === 'ceiling')
+)
+
+const desiccantProducts = computed(() => 
+  dehumidifiersData.filter(p => p.category === 'desiccant')
+)
 
 const sections = [
   { id: 'portable', name: 'Portable', emoji: '💧' },
@@ -655,6 +787,7 @@ onUnmounted(() => {
 
 const portableScenes = ['Indoor Grow Room', 'Small Greenhouse', 'Propagation Chamber', 'Herb Garden']
 const floorScenes = ['Large Greenhouse', 'Warehouse Growing', 'Vertical Farm', 'Commercial Mushroom Farm']
+const ceilingScenes = ['Commercial Greenhouse', 'Cannabis Grow Facility', 'Vertical Farm', 'Large Mushroom House']
 const desiccantScenes = ['Seed Storage', 'Cold Storage', 'Fruit Drying Room', 'Pharmaceutical Storage']
 const humidifierScenes = ['Hydroponics', 'Tissue Culture Lab', 'Greenhouse', 'Grow Tent', 'Herb Garden']
 const ventilationScenes = ['Climate-Controlled Grow Room', 'Container Farm', 'Vertical Farm', 'Indoor Farm']
