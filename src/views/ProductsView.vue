@@ -706,7 +706,15 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useSEO } from '@/composables/useSEO'
 import { dehumidifiers, humidifiers, ventilation } from '../data/cms/index.js'
+
+useSEO({
+  title: 'Dehumidifiers & Humidifiers — Industrial Climate Control Products',
+  description: 'Portable, floor standing, ceiling/duct, and desiccant dehumidifiers plus industrial humidifiers and ventilation. R290/R32 refrigerants, Modbus control, CE/UL certified. OEM/ODM available.',
+  keywords: 'industrial dehumidifier, greenhouse dehumidifier, desiccant dehumidifier, portable dehumidifier commercial, ceiling duct dehumidifier, industrial humidifier, R290 dehumidifier, Modbus dehumidifier',
+  url: 'https://growclimate.com/products',
+})
 
 // Load CMS data
 const dehumidifiersData = dehumidifiers

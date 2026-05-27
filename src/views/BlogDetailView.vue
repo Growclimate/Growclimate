@@ -75,6 +75,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useSEO } from '@/composables/useSEO'
 
 const route = useRoute()
 const slug = route.params.slug
@@ -394,5 +395,16 @@ const post = computed(() => allPosts[slug] || {
   readTime: 0,
   image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
   content: `<p>The article you're looking for doesn't exist or has been moved.</p><p><RouterLink to="/blog">Return to the blog</RouterLink></p>`
+})
+
+// Dynamic SEO for blog posts
+useSEO({
+  title: post.value.title,
+  description: post.value.excerpt || post.value.title,
+  image: post.value.image,
+  url: `https://growclimate.com/blog/${slug}`,
+  type: 'article',
+  publishedTime: post.value.date,
+  keywords: `${post.value.category}, greenhouse blog, climate control, dehumidifier guide, growing science`,
 })
 </script>

@@ -6,16 +6,9 @@
 
         <!-- Brand Column -->
         <div class="lg:col-span-1">
-          <div class="flex items-center space-x-2 mb-4">
-            <div class="w-9 h-9 bg-brand-600 rounded-lg flex items-center justify-center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7z" fill="white"/>
-                <path d="M9 21v1h6v-1H9z" fill="white" opacity="0.7"/>
-                <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z" fill="white"/>
-              </svg>
-            </div>
-            <span class="text-xl font-bold">GrowClimate</span>
-          </div>
+          <RouterLink to="/" class="inline-block mb-4">
+            <img src="/images/logo.png" alt="GrowClimate" class="h-20 w-auto" />
+          </RouterLink>
           <p class="text-gray-400 text-sm leading-relaxed mb-6">
             Precision climate control solutions for greenhouse, hydroponics, and indoor farming. Engineering reliability since day one.
           </p>

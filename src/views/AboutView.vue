@@ -102,6 +102,14 @@
 </template>
 
 <script setup>
+import { useSEO } from '@/composables/useSEO'
+
+useSEO({
+  title: 'About GrowClimate — Engineering Climate Control Since 2013',
+  description: 'GrowClimate is an engineering-first manufacturer of industrial dehumidifiers and climate control systems for greenhouse, hydroponics, and indoor farming. CE/ISO certified, 40+ countries.',
+  keywords: 'about GrowClimate, dehumidifier manufacturer China, OEM dehumidifier, climate control engineering, greenhouse equipment manufacturer, CE certified dehumidifier',
+  url: 'https://growclimate.com/about',
+})
 const values = [
   { emoji: '🔬', title: 'Engineering First', desc: 'Every product decision starts with real-world application requirements, not cost optimization. We design for performance, then refine for efficiency.' },
   { emoji: '🌍', title: 'Sustainability', desc: 'R290 propane refrigerants, energy-efficient designs, and long product lifespans are core to our environmental commitment.' },

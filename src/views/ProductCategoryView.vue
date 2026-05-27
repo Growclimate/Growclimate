@@ -33,6 +33,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useSEO } from '@/composables/useSEO'
 import ProductCard from '@/components/product/ProductCard.vue'
 import { productCategories, dehumidifierProducts, humidifierProducts, ventilationProducts } from '@/data/products.js'
 
@@ -44,6 +45,15 @@ const catMap = {
   humidifiers: { name: 'Humidifiers', desc: 'Precision humidification systems for hydroponics, greenhouse, and tissue culture labs.', products: humidifierProducts },
   ventilation: { name: 'Fans & Ventilation', desc: 'Air circulation and ventilation solutions for vertical farms, grow rooms, and container farms.', products: ventilationProducts },
 }
+
+const currentCat = computed(() => catMap[catId] || catMap.dehumidifiers)
+
+useSEO({
+  title: `${currentCat.value.name} — GrowClimate`,
+  description: currentCat.value.desc,
+  keywords: `${currentCat.value.name.toLowerCase()}, greenhouse equipment, grow room, climate control, OEM manufacturer, industrial`,
+  url: `https://growclimate.com/products/${catId}`,
+})
 
 const categoryName = computed(() => catMap[catId]?.name || 'Products')
 const categoryDesc = computed(() => catMap[catId]?.desc || '')

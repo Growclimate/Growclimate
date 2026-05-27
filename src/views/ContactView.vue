@@ -170,6 +170,14 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { h } from 'vue'
+import { useSEO } from '@/composables/useSEO'
+
+useSEO({
+  title: 'Contact GrowClimate — Get a Quote for Climate Control Solutions',
+  description: 'Contact GrowClimate for OEM dehumidifier quotes, climate control consulting, and technical support. Response within 24 hours. Serving greenhouse and indoor farming operations worldwide.',
+  keywords: 'contact GrowClimate, dehumidifier quote, OEM dehumidifier inquiry, climate control consultation, greenhouse equipment supplier, industrial dehumidifier manufacturer',
+  url: 'https://growclimate.com/contact',
+})
 
 const form = reactive({
   company: '',

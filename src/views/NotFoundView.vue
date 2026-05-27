@@ -17,4 +17,11 @@
 </template>
 
 <script setup>
+import { useSEO } from '@/composables/useSEO'
+
+useSEO({
+  title: '404 — Page Not Found | GrowClimate',
+  description: 'The page you are looking for does not exist. Visit the GrowClimate homepage for climate control solutions.',
+  url: 'https://growclimate.com',
+})
 </script>

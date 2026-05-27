@@ -1,22 +1,10 @@
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
+      <div class="flex items-center justify-between h-20 lg:h-28">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center space-x-2 flex-shrink-0" @click="closeMobile">
-          <div class="w-9 h-9 bg-brand-600 rounded-lg flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Sprout/Growing Plant Logo for GrowClimate -->
-              <path d="M12 22V12" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 12C12 12 8 8 7 5C6 2 8 0 11 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.3"/>
-              <path d="M12 12C12 12 16 8 17 5C18 2 16 0 13 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.3"/>
-              <path d="M12 12C12 12 9 9 7 10" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="white" fill-opacity="0.25"/>
-              <path d="M12 12C12 12 15 9 17 10" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="white" fill-opacity="0.25"/>
-            </svg>
-          </div>
-          <div>
-            <span class="text-lg lg:text-xl font-bold text-dark-900 tracking-tight">GrowClimate</span>
-          </div>
+          <img src="/images/logo.png" alt="GrowClimate" class="h-20 lg:h-24 w-auto" />
         </RouterLink>
 
         <!-- Desktop Navigation -->
@@ -286,7 +274,7 @@
     </Transition>
   </header>
   <!-- Spacer for fixed header -->
-  <div class="h-16 lg:h-20"></div>
+  <div class="h-20 lg:h-28"></div>
 </template>
 
 <script setup>

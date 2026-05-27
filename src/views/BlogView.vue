@@ -72,12 +72,20 @@
 </template>
 
 <script setup>
+import { useSEO } from '@/composables/useSEO'
+
+useSEO({
+  title: 'Technical Blog — Climate Control Insights for Growers',
+  description: 'Expert insights on greenhouse humidity management, VPD optimization, dehumidifier selection, and climate control strategies for commercial growers. Latest growing science and equipment guides.',
+  keywords: 'greenhouse humidity management, VPD explained, dehumidifier guide, climate control blog, growing environment, commercial dehumidifier, hydroponics humidity',
+  url: 'https://growclimate.com/blog',
+})
 const featured = {
   slug: 'greenhouse-humidity-management-guide',
   title: 'Complete Guide to Greenhouse Humidity Management',
   category: 'Growing Science',
   date: 'May 20, 2026',
-  image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+  image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&q=80',
   excerpt: 'Learn how to balance humidity levels throughout the day-night cycle in greenhouse environments. This guide covers VPD calculation, dehumidifier sizing, and climate automation strategies for commercial growers.'
 }
 
@@ -87,7 +95,7 @@ const posts = [
     title: 'VPD Explained: The Key to Optimizing Plant Transpiration',
     category: 'Growing Science',
     date: 'May 18, 2026',
-    image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?w=600&q=80',
     excerpt: 'Vapor Pressure Deficit is the most important yet misunderstood climate variable in controlled-environment agriculture. Here\'s how to calculate and use it for healthier plants and higher yields.'
   },
   {
@@ -95,7 +103,7 @@ const posts = [
     title: 'Desiccant vs Compressor Dehumidifiers: How to Choose',
     category: 'Equipment Guide',
     date: 'May 15, 2026',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80',
     excerpt: 'A detailed comparison of sorptive rotor dehumidifiers and compressor-based systems — understanding dew point, ambient temperature, and energy efficiency trade-offs.'
   },
   {
@@ -103,7 +111,7 @@ const posts = [
     title: 'Climate Control for Mushroom Farms: Why RH Above 85% Matters',
     category: 'Case Studies',
     date: 'May 10, 2026',
-    image: 'https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?w=600&q=80',
     excerpt: 'A walkthrough of the climate requirements for oyster, shiitake, and button mushroom cultivation, and how GrowClimate equipment achieves them at commercial scale.'
   },
   {
@@ -111,7 +119,7 @@ const posts = [
     title: 'The Science of Fruit Drying: Controlled Climate for Premium Quality',
     category: 'Agricultural Applications',
     date: 'May 5, 2026',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=600&q=80',
     excerpt: 'Drying fruits and agricultural products needs precise temperature and humidity control. Learn how modern dehumidification technology preserves nutrients and prevents spoilage.'
   },
   {
@@ -119,7 +127,7 @@ const posts = [
     title: 'Seed Storage Science: Maintaining Viability for Decades',
     category: 'Technical',
     date: 'April 28, 2026',
-    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80',
     excerpt: 'Seed banks maintain seeds viable for 50+ years through precise temperature and humidity control. Here\'s the science and equipment behind long-term seed preservation.'
   },
   {
@@ -127,7 +135,7 @@ const posts = [
     title: 'Cannabis Drying Room Design: Temperature, Humidity & Airflow Guide',
     category: 'Industry Guide',
     date: 'April 22, 2026',
-    image: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1589244159943-460088ed5c92?w=600&q=80',
     excerpt: 'Post-harvest drying is where many cultivators lose quality. Learn the optimal drying room parameters, equipment sizing, and climate control strategies for premium flower preservation.'
   },
   {
@@ -135,7 +143,7 @@ const posts = [
     title: 'Vertical Farming Humidity: Challenges & Solutions for Multi-Layer Growing',
     category: 'Growing Science',
     date: 'April 15, 2026',
-    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?w=600&q=80',
     excerpt: 'Multi-layer indoor farms face unique humidity challenges — heat stratification, microclimate variance between racks, and high planting density. Discover proven climate control strategies.'
   },
   {
@@ -143,7 +151,7 @@ const posts = [
     title: 'Why R290 Is the Future of Greenhouse Dehumidification',
     category: 'Sustainability',
     date: 'April 8, 2026',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80',
     excerpt: 'R290 (propane) refrigerant has a GWP of just 3 — 675× lower than R410A. Learn why European and North American growers are switching to R290 dehumidifiers for compliance and performance.'
   },
   {
@@ -151,7 +159,7 @@ const posts = [
     title: '5 Ways Commercial Growers Cut Dehumidification Energy Costs by 40%',
     category: 'Energy Efficiency',
     date: 'March 30, 2026',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&q=80',
     excerpt: 'Dehumidification is often the second-largest energy cost in greenhouses. These five strategies — from VPD-based control to heat recovery — deliver real savings without compromising crop quality.'
   },
 ]

@@ -64,13 +64,21 @@
 </template>
 
 <script setup>
+import { useSEO } from '@/composables/useSEO'
+
+useSEO({
+  title: 'Application Solutions — Climate Control by Growing Environment',
+  description: 'Tailored climate control solutions for greenhouse, hydroponics, mushroom farming, seed storage, and fruit drying. Discover the right dehumidifier and humidifier for your application.',
+  keywords: 'greenhouse climate control, hydroponics dehumidifier, mushroom farm humidity, seed storage dehumidifier, fruit drying climate control, grow room equipment',
+  url: 'https://growclimate.com/applications',
+})
 const applications = [
   {
     id: 'greenhouse',
     emoji: '🌿',
     title: 'Greenhouse Climate Control',
     subtitle: 'Precision humidity & temperature for glasshouse environments',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
+    image: '/images/applications/greenhouse.jpg',
     description: 'Modern greenhouses face complex microclimate challenges — temperature stratification, high humidity during night cycles, and rapid evaporation in summer. GrowClimate systems provide 24/7 automated climate regulation, keeping canopy-level humidity between 60–80% RH regardless of outdoor conditions.',
     products: ['GROW-120', 'GRO-385L', 'GROW-12D', 'GROW-24D'],
     targets: [
@@ -115,7 +123,7 @@ const applications = [
     emoji: '🌱',
     title: 'Seed Storage & Germplasm Preservation',
     subtitle: 'Long-term seed viability through precision climate control',
-    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80',
     description: 'Maintaining seed viability for decades requires strict control of both temperature and humidity. GrowClimate desiccant rotor dehumidifiers achieve and maintain RH below 30% in cold storage environments where compressor dehumidifiers fail. Our GROW-580 and GROW-1100M series are the backbone of seed banks and germplasm libraries worldwide.',
     products: ['GROW-580', 'GROW-1100M', 'GROW-1550M'],
     targets: [

@@ -2,33 +2,34 @@
   <div class="growclimate-home">
 
     <!-- ===== HERO SECTION ===== -->
-    <section class="hero-section relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900"></div>
-      <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-20 left-10 w-72 h-72 bg-brand-500 rounded-full filter blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-400 rounded-full filter blur-3xl"></div>
+    <section class="hero-section relative overflow-hidden" style="min-height: 600px;">
+      <!-- Real photo background -->
+      <div class="absolute inset-0">
+        <img src="/images/hero-bg.jpg" alt="Greenhouse" class="w-full h-full object-cover object-center" />
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/40 to-transparent"></div>
       </div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div class="max-w-3xl">
-          <div class="inline-flex items-center px-4 py-1.5 bg-brand-600/20 border border-brand-500/30 rounded-full text-brand-300 text-sm font-medium mb-6">
-            <span class="w-2 h-2 bg-brand-400 rounded-full mr-2 animate-pulse"></span>
+          <div class="inline-flex items-center px-4 py-1.5 bg-white/15 border border-white/40 rounded-full text-white text-sm font-medium mb-6 backdrop-blur-sm">
+            <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Climate Control for Growing Excellence
           </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-lg">
             Precision Climate.<br />
-            <span class="text-brand-400">Maximum Yield.</span>
+            <span class="text-green-300">Maximum Yield.</span>
           </h1>
-          <p class="text-lg lg:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
+          <p class="text-lg lg:text-xl text-white/90 leading-relaxed mb-8 max-w-2xl drop-shadow-md">
             Industrial-grade dehumidifiers, humidifiers, and ventilation systems engineered for greenhouse, hydroponics, and controlled-environment agriculture. Trusted by growers in 40+ countries.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <RouterLink to="/products" class="inline-flex items-center justify-center px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-brand-900/50 text-base">
+            <RouterLink to="/products" class="inline-flex items-center justify-center px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-black/30 text-base">
               Explore Products
               <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </RouterLink>
-            <RouterLink to="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-xl transition-all text-base">
+            <RouterLink to="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white/20 hover:bg-white/30 border border-white/60 text-white font-semibold rounded-xl transition-all text-base backdrop-blur-sm">
               Request a Quote
             </RouterLink>
           </div>
@@ -36,9 +37,9 @@
 
         <!-- Stats -->
         <div class="mt-16 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl">
-          <div v-for="stat in stats" :key="stat.label" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5">
-            <div class="text-3xl font-black text-brand-400 mb-1">{{ stat.value }}</div>
-            <div class="text-sm text-gray-400">{{ stat.label }}</div>
+          <div v-for="stat in stats" :key="stat.label" class="bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+            <div class="text-3xl font-black text-green-300 mb-1">{{ stat.value }}</div>
+            <div class="text-sm text-white/80">{{ stat.label }}</div>
           </div>
         </div>
       </div>
@@ -178,8 +179,16 @@
 </template>
 
 <script setup>
+import { useSEO } from '@/composables/useSEO'
 import { h } from 'vue'
 import { applicationCases } from '@/data/products.js'
+
+useSEO({
+  title: 'GrowClimate — Precision Climate. Maximum Yield.',
+  description: 'Industrial-grade dehumidifiers, humidifiers, and ventilation systems engineered for greenhouse, hydroponics, and controlled-environment agriculture. OEM/ODM manufacturer. Trusted in 40+ countries.',
+  keywords: 'greenhouse dehumidifier, commercial dehumidifier, grow room climate control, industrial humidifier, OEM dehumidifier manufacturer, hydroponics equipment, climate control solutions',
+  url: 'https://growclimate.com',
+})
 
 const stats = [
   { value: '12+', label: 'Years Experience' },
