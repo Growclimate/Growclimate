@@ -615,7 +615,7 @@ const allPosts = {
     category: 'Crop Science',
     date: 'July 16, 2026',
     readTime: 10,
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
+    image: '/images/blog/Commercial_mushroom_grow_room__2026-07-16T05-37-59.png',
     excerpt: 'Master mushroom growing humidity control with stage-by-stage RH targets for oyster, shiitake, enoki, and king oyster mushrooms. Learn how to prevent blotch, maximize yields, and build a climate-ready mushroom greenhouse.',
     keywords: 'mushroom growing humidity control, mushroom room humidity management, greenhouse humidity control for mushroom cultivation, commercial mushroom farming humidity, mushroom grow room climate control, mushroom plantation greenhouse construction, agricultural climate distributor, mushroom yield improvement by humidity control',
     content: `
@@ -642,7 +642,7 @@ const allPosts = {
       </div>
 
       <figure class="my-8">
-        <img src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=800&q=80" alt="commercial mushroom grow room with oyster shiitake and enoki varieties growing in humidity-controlled environment" class="w-full rounded-xl" loading="lazy" />
+        <img src="/images/blog/Close_up_of_multiple_mushroom__2026-07-16T05-37-58.png" alt="commercial mushroom grow room with oyster shiitake and enoki varieties growing in humidity-controlled environment" class="w-full rounded-xl" loading="lazy" />
         <figcaption class="text-center text-sm text-gray-500 mt-2">Different mushroom varieties require species-specific humidity profiles across spawn run, pinning, and fruiting stages</figcaption>
       </figure>
 
@@ -678,7 +678,7 @@ const allPosts = {
       <p class="text-gray-700 mb-4">The critical insight: high humidity itself is not the enemy — <strong>stagnant, condensing humidity is</strong>. The solution is maintaining high RH with simultaneous air exchange. A well-designed <strong>greenhouse humidity control for mushroom cultivation</strong> system pairs humidification with fresh air exchange to keep RH high without surface wetness.</p>
 
       <figure class="my-8">
-        <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?w=800&q=80" alt="healthy vs diseased mushrooms comparison showing effects of improper humidity control" class="w-full rounded-xl" loading="lazy" />
+        <img src="/images/blog/Comparison_of_healthy_mushroom_2026-07-16T05-37-59.png" alt="healthy vs diseased mushrooms comparison showing effects of improper humidity control" class="w-full rounded-xl" loading="lazy" />
         <figcaption class="text-center text-sm text-gray-500 mt-2">Healthy mushrooms (left) vs. humidity-damaged crop with cracked caps and bacterial blotch (right) — a 10% RH deviation can cause 30% yield loss</figcaption>
       </figure>
 
@@ -701,7 +701,7 @@ const allPosts = {
       <p class="text-gray-700 mb-4">This is where <strong>mushroom plantation greenhouse construction</strong> meets climate engineering. The greenhouse is designed around the mushroom's biological schedule, not the other way around.</p>
 
       <figure class="my-8">
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80" alt="smart mushroom greenhouse with integrated climate control system and control panel" class="w-full rounded-xl" loading="lazy" />
+        <img src="/images/blog/Modern_smart_mushroom_greenhou_2026-07-16T05-37-58.png" alt="smart mushroom greenhouse with integrated climate control system and control panel" class="w-full rounded-xl" loading="lazy" />
         <figcaption class="text-center text-sm text-gray-500 mt-2">A standardized smart mushroom greenhouse combines humidification, dehumidification, and coordinated air exchange — the professional standard for commercial cultivation</figcaption>
       </figure>
 
@@ -718,7 +718,7 @@ const allPosts = {
       <p class="text-gray-700 mb-4">For <strong>agricultural climate distributor</strong> partners, these design requirements translate directly into equipment specifications — the right humidifier capacity, dehumidifier sizing, controller type, and sensor package for each project.</p>
 
       <figure class="my-8">
-        <img src="https://images.unsplash.com/photo-1530768054212-99af45dba8e2?w=800&q=80" alt="industrial humidity control equipment with Modbus controller for mushroom greenhouse" class="w-full rounded-xl" loading="lazy" />
+        <img src="/images/blog/Industrial_humidity_control_eq_2026-07-16T05-37-59.png" alt="industrial humidity control equipment with Modbus controller for mushroom greenhouse" class="w-full rounded-xl" loading="lazy" />
         <figcaption class="text-center text-sm text-gray-500 mt-2">Mushroom greenhouse climate systems require integrated humidification, dehumidification, and Modbus-based zone control — engineered for continuous 85–95% RH operation</figcaption>
       </figure>
 
