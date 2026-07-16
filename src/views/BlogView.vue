@@ -95,8 +95,7 @@ const posts = [
     title: 'Mushroom Growing Humidity Control: The Complete Guide to Maximizing Yield',
     category: 'Crop Science',
     date: 'July 16, 2026',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
-    excerpt: 'Master mushroom growing humidity control with stage-by-stage RH targets for oyster, shiitake, enoki, and king oyster mushrooms. Learn how to prevent blotch, maximize yields, and build a climate-ready mushroom greenhouse.'
+    image: '/images/blog/Commercial_mushroom_grow_room__2026-07-16T05-37-59.png',
   },
   {
     slug: 'tomato-greenhouse-humidity-control',
@@ -143,7 +142,7 @@ const posts = [
     title: 'Climate Control for Mushroom Farms: Why RH Above 85% Matters',
     category: 'Case Studies',
     date: 'May 10, 2026',
-    image: 'https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?w=600&q=80',
+    image: '/images/blog/Modern_smart_mushroom_greenhou_2026-07-16T05-37-58.png',
     excerpt: 'A walkthrough of the climate requirements for oyster, shiitake, and button mushroom cultivation, and how GrowClimate equipment achieves them at commercial scale.'
   },
   {
