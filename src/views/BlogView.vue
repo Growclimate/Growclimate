@@ -75,21 +75,53 @@
 import { useSEO } from '@/composables/useSEO'
 
 useSEO({
-  title: 'Technical Blog — Climate Control Insights for Growers',
-  description: 'Expert insights on greenhouse humidity management, VPD optimization, dehumidifier selection, and climate control strategies for commercial growers. Latest growing science and equipment guides.',
+  title: 'Climate Control Blog — GrowClimate',
+  description: 'Expert insights on greenhouse humidity, VPD optimization, and dehumidifier selection for commercial growers. Growing science and equipment guides.',
   keywords: 'greenhouse humidity management, VPD explained, dehumidifier guide, climate control blog, growing environment, commercial dehumidifier, hydroponics humidity',
   url: 'https://growclimate.com/blog',
 })
 const featured = {
-  slug: 'greenhouse-humidity-management-guide',
-  title: 'Complete Guide to Greenhouse Humidity Management',
+  slug: 'ultimate-guide-greenhouse-grow-room-humidity-control',
+  title: 'The Ultimate Guide to Greenhouse & Grow Room Humidity Control',
   category: 'Growing Science',
-  date: 'May 20, 2026',
-  image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&q=80',
-  excerpt: 'Learn how to balance humidity levels throughout the day-night cycle in greenhouse environments. This guide covers VPD calculation, dehumidifier sizing, and climate automation strategies for commercial growers.'
+  date: 'May 27, 2026',
+  image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80',
+  excerpt: 'Master humidity control in your greenhouse or grow room. Learn optimal RH levels by growth stage, prevent mold and root rot, and discover how to choose the right dehumidifier for healthier plants and higher yields.'
 }
 
 const posts = [
+  {
+    slug: 'mushroom-growing-humidity-control',
+    title: 'Mushroom Growing Humidity Control: The Complete Guide to Maximizing Yield',
+    category: 'Crop Science',
+    date: 'July 16, 2026',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    excerpt: 'Master mushroom growing humidity control with stage-by-stage RH targets for oyster, shiitake, enoki, and king oyster mushrooms. Learn how to prevent blotch, maximize yields, and build a climate-ready mushroom greenhouse.'
+  },
+  {
+    slug: 'tomato-greenhouse-humidity-control',
+    title: 'Tomato Greenhouse Humidity Control: Why It Matters & How to Get It Right',
+    category: 'Crop Science',
+    date: 'June 25, 2026',
+    image: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=600&q=80',
+    excerpt: 'Humidity makes or breaks a tomato crop. Learn optimal RH levels by growth stage, how to prevent blight and blossom end rot, and how to choose the right dehumidifier for your tomato greenhouse.'
+  },
+  {
+    slug: 'greenhouse-humidity-management-guide',
+    title: 'Complete Guide to Greenhouse Humidity Management',
+    category: 'Growing Science',
+    date: 'May 20, 2026',
+    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&q=80',
+    excerpt: 'Learn how to balance humidity levels throughout the day-night cycle in greenhouse environments. This guide covers VPD calculation, dehumidifier sizing, and climate automation strategies for commercial growers.'
+  },
+  {
+    slug: 'ultimate-guide-greenhouse-grow-room-humidity-control',
+    title: 'The Ultimate Guide to Greenhouse & Grow Room Humidity Control',
+    category: 'Growing Science',
+    date: 'May 27, 2026',
+    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80',
+    excerpt: 'Master humidity control in your greenhouse or grow room. Learn optimal RH levels by growth stage, prevent mold and root rot, and discover how to choose the right dehumidifier for healthier plants and higher yields.'
+  },
   {
     slug: 'vpd-explained',
     title: 'VPD Explained: The Key to Optimizing Plant Transpiration',

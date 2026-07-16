@@ -5,7 +5,7 @@
     <section class="hero-section relative overflow-hidden" style="min-height: 600px;">
       <!-- Real photo background -->
       <div class="absolute inset-0">
-        <img src="/images/hero-bg.jpg" alt="Greenhouse" class="w-full h-full object-cover object-center" />
+        <img src="/images/hero-bg.jpg" alt="Greenhouse" class="w-full h-full object-cover object-center" fetchpriority="high" />
         <!-- Dark overlay for text readability -->
         <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/40 to-transparent"></div>
       </div>
@@ -185,7 +185,7 @@ import { applicationCases } from '@/data/products.js'
 
 useSEO({
   title: 'GrowClimate — Precision Climate. Maximum Yield.',
-  description: 'Industrial-grade dehumidifiers, humidifiers, and ventilation systems engineered for greenhouse, hydroponics, and controlled-environment agriculture. OEM/ODM manufacturer. Trusted in 40+ countries.',
+  description: 'Industrial dehumidifiers, humidifiers, and ventilation for greenhouse, hydroponics, and controlled-environment agriculture. OEM/ODM. Trusted in 40+ countries.',
   keywords: 'greenhouse dehumidifier, commercial dehumidifier, grow room climate control, industrial humidifier, OEM dehumidifier manufacturer, hydroponics equipment, climate control solutions',
   url: 'https://growclimate.com',
 })

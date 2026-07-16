@@ -67,8 +67,8 @@
 import { useSEO } from '@/composables/useSEO'
 
 useSEO({
-  title: 'Application Solutions — Climate Control by Growing Environment',
-  description: 'Tailored climate control solutions for greenhouse, hydroponics, mushroom farming, seed storage, and fruit drying. Discover the right dehumidifier and humidifier for your application.',
+  title: 'Application Solutions — GrowClimate',
+  description: 'Climate control solutions for greenhouse, hydroponics, mushroom farming, seed storage, and fruit drying. Find the right dehumidifier for your application.',
   keywords: 'greenhouse climate control, hydroponics dehumidifier, mushroom farm humidity, seed storage dehumidifier, fruit drying climate control, grow room equipment',
   url: 'https://growclimate.com/applications',
 })

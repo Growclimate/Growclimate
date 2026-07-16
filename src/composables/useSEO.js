@@ -13,9 +13,10 @@ export function useSEO(options = {}) {
   } = options
 
   const fullTitle = title.includes('GrowClimate') ? title : `${title} | GrowClimate`
+  const safeTitle = fullTitle.length > 60 ? fullTitle.substring(0, 57) + '...' : fullTitle
 
   useHead({
-    title: fullTitle,
+    title: safeTitle,
     meta: [
       { name: 'description', content: description },
       { name: 'keywords', content: keywords },

@@ -3,7 +3,6 @@
 
 backend:
   name: git-gateway
-  repo: Growclimate/Growclimate
   branch: master
 
 # Media storage (images uploaded in CMS go here)
@@ -13,123 +12,111 @@ public_folder: "/images/uploads"
 # Editorial workflow (draft/review/publish)
 publish_mode: editorial_workflow
 
-# Site URL
-site_url: https://growclimate-cms.netlify.app
-display_url: https://growclimate-cms.netlify.app
+# ⚠️ IMPORTANT: Update this to your actual Netlify site URL after deployment!
+site_url: https://your-site-name.netlify.app
+display_url: https://your-site-name.netlify.app
 
 # Collections = content sections in the CMS
 collections:
 
   # ─────────────────────────────────────────────
-  # Products — Dehumidifiers
+  # Products — Dehumidifiers (Single JSON file)
   # ─────────────────────────────────────────────
   - name: "dehumidifiers"
     label: "Products — Dehumidifiers"
     label_singular: "Dehumidifier"
-    folder: "src/data/cms/products/"
+    file: "src/data/cms/products/dehumidifiers.json"
+    extension: "json"
+    format: "json"
     create: true
-    slug: "{{slug}}"
-    identifier_field: model
     fields:
-      - { label: "Model Number", name: "model", widget: "string", hint: "e.g. RYCM-50C" }
-      - { label: "Series Name", name: "series", widget: "string", hint: "e.g. Commercial Dehumidifier" }
-      - { label: "Tagline", name: "tagline", widget: "string", hint: "One-line description for product cards" }
-      - { label: "Capacity", name: "capacity", widget: "string", hint: "e.g. 50L/day" }
-      - { label: "Power", name: "power", widget: "string", hint: "e.g. 680W" }
-      - { label: "Refrigerant", name: "refrigerant", widget: "string", hint: "e.g. R290 or N/A (Desiccant)" }
-      - { label: "Dimensions", name: "dimensions", widget: "string", hint: "e.g. 480×380×620mm" }
-      - { label: "Weight", name: "weight", widget: "string", hint: "e.g. 32kg" }
-      - { label: "Airflow", name: "airflow", widget: "string", hint: "e.g. 350m³/h" }
-      - { label: "Noise Level", name: "noise", widget: "string", hint: "e.g. ≤52dB" }
-      - { label: "Product Image URL", name: "image", widget: "string", hint: "URL to product image (use CDN or /images/uploads/filename.jpg)" }
-      - { label: "Application Scenes", name: "scenes", widget: "list", hint: "Where this product is typically used" }
-      - { label: "Key Features", name: "features", widget: "list", hint: "Bullet-point product features" }
-      - { label: "Selling Points (long description)", name: "sellingPoints", widget: "markdown", required: false, hint: "Detailed selling points shown on product detail" }
-      - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false, hint: "URL to PDF datasheet for download button" }
+      - label: Products
+        name: products
+        widget: list
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Model Number", name: "model", widget: "string" }
+          - { label: "Series Name", name: "series", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Capacity", name: "capacity", widget: "string" }
+          - { label: "Power", name: "power", widget: "string" }
+          - { label: "Refrigerant", name: "refrigerant", widget: "string" }
+          - { label: "Dimensions", name: "dimensions", widget: "string" }
+          - { label: "Weight", name: "weight", widget: "string" }
+          - { label: "Airflow", name: "airflow", widget: "string" }
+          - { label: "Noise Level", name: "noise", widget: "string" }
+          - { label: "Product Image URL", name: "image", widget: "string" }
+          - { label: "Application Scenes", name: "scenes", widget: "list" }
+          - { label: "Key Features", name: "features", widget: "list" }
+          - { label: "Selling Points", name: "sellingPoints", widget: "text", required: false }
+          - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
 
   # ─────────────────────────────────────────────
-  # Products — Humidifiers
+  # Products — Humidifiers (Single JSON file)
   # ─────────────────────────────────────────────
   - name: "humidifiers"
     label: "Products — Humidifiers"
     label_singular: "Humidifier"
-    folder: "src/data/cms/products/"
+    file: "src/data/cms/products/humidifiers.json"
+    extension: "json"
+    format: "json"
     create: true
-    slug: "{{slug}}"
-    identifier_field: model
     fields:
-      - { label: "Model Number", name: "model", widget: "string" }
-      - { label: "Series Name", name: "series", widget: "string" }
-      - { label: "Tagline", name: "tagline", widget: "string" }
-      - { label: "Capacity", name: "capacity", widget: "string", hint: "e.g. 3L/h" }
-      - { label: "Power", name: "power", widget: "string" }
-      - { label: "Mist Type", name: "mistType", widget: "string", hint: "e.g. Ultrasonic or Evaporative" }
-      - { label: "Dimensions", name: "dimensions", widget: "string" }
-      - { label: "Weight", name: "weight", widget: "string" }
-      - label: "Coverage Area"
-        name: "coverage"
-        widget: "string"
-        hint: "e.g. 20-40m²"
-      - { label: "Noise Level", name: "noise", widget: "string" }
-      - { label: "Product Image URL", name: "image", widget: "string" }
-      - { label: "Application Scenes", name: "scenes", widget: "list" }
-      - { label: "Key Features", name: "features", widget: "list" }
-      - { label: "Selling Points", name: "sellingPoints", widget: "markdown", required: false }
-      - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
+      - label: Products
+        name: products
+        widget: list
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Model Number", name: "model", widget: "string" }
+          - { label: "Series Name", name: "series", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Capacity", name: "capacity", widget: "string" }
+          - { label: "Power", name: "power", widget: "string" }
+          - { label: "Mist Type", name: "mistType", widget: "string" }
+          - { label: "Dimensions", name: "dimensions", widget: "string" }
+          - { label: "Weight", name: "weight", widget: "string" }
+          - { label: "Coverage Area", name: "coverage", widget: "string" }
+          - { label: "Noise Level", name: "noise", widget: "string" }
+          - { label: "Product Image URL", name: "image", widget: "string" }
+          - { label: "Application Scenes", name: "scenes", widget: "list" }
+          - { label: "Key Features", name: "features", widget: "list" }
+          - { label: "Selling Points", name: "sellingPoints", widget: "text", required: false }
+          - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
 
   # ─────────────────────────────────────────────
-  # Products — Ventilation
+  # Products — Ventilation (Single JSON file)
   # ─────────────────────────────────────────────
   - name: "ventilation"
     label: "Products — Fans & Ventilation"
     label_singular: "Ventilation Product"
-    folder: "src/data/cms/products/"
+    file: "src/data/cms/products/ventilation.json"
+    extension: "json"
+    format: "json"
     create: true
-    slug: "{{slug}}"
-    identifier_field: model
     fields:
-      - { label: "Model Number", name: "model", widget: "string" }
-      - { label: "Series Name", name: "series", widget: "string" }
-      - { label: "Tagline", name: "tagline", widget: "string" }
-      - { label: "Cooling Capacity", name: "cooling", widget: "string", required: false }
-      - { label: "Power", name: "power", widget: "string" }
-      - { label: "Refrigerant", name: "refrigerant", widget: "string" }
-      - { label: "Dimensions", name: "dimensions", widget: "string" }
-      - { label: "Weight", name: "weight", widget: "string" }
-      - { label: "Airflow", name: "airflow", widget: "string" }
-      - { label: "Noise Level", name: "noise", widget: "string" }
-      - { label: "Product Image URL", name: "image", widget: "string" }
-      - { label: "Application Scenes", name: "scenes", widget: "list" }
-      - { label: "Key Features", name: "features", widget: "list" }
-      - { label: "Selling Points", name: "sellingPoints", widget: "markdown", required: false }
-      - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
-
-  # ─────────────────────────────────────────────
-  # Application Solutions (行业方案)
-  # ─────────────────────────────────────────────
-  - name: "applications"
-    label: "Application Solutions"
-    label_singular: "Application Solution"
-    folder: "src/data/cms/applications/"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: id
-    fields:
-      - { label: "ID (URL-safe)", name: "id", widget: "string", hint: "e.g. greenhouse, hydroponics" }
-      - { label: "Emoji Icon", name: "emoji", widget: "string", hint: "e.g. 🌿" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Description", name: "description", widget: "textarea" }
-      - { label: "Recommended Products", name: "products", widget: "list", hint: "Model numbers e.g. RYCM-90C, UH-6L" }
-      - label: "Climate Targets"
-        name: "targets"
-        widget: "list"
+      - label: Products
+        name: products
+        widget: list
         fields:
-          - { label: "Label", name: "label", widget: "string" }
-          - { label: "Value", name: "value", widget: "string" }
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Model Number", name: "model", widget: "string" }
+          - { label: "Series Name", name: "series", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Cooling Capacity", name: "cooling", widget: "string" }
+          - { label: "Power", name: "power", widget: "string" }
+          - { label: "Refrigerant", name: "refrigerant", widget: "string" }
+          - { label: "Dimensions", name: "dimensions", widget: "string" }
+          - { label: "Weight", name: "weight", widget: "string" }
+          - { label: "Airflow", name: "airflow", widget: "string" }
+          - { label: "Noise Level", name: "noise", widget: "string" }
+          - { label: "Product Image URL", name: "image", widget: "string" }
+          - { label: "Application Scenes", name: "scenes", widget: "list" }
+          - { label: "Key Features", name: "features", widget: "list" }
+          - { label: "Selling Points", name: "sellingPoints", widget: "text", required: false }
+          - { label: "Datasheet URL", name: "datasheet", widget: "string", required: false }
 
   # ─────────────────────────────────────────────
-  # Company Info (可编辑的联系方式等)
+  # Company Info (Single JSON file)
   # ─────────────────────────────────────────────
   - name: "company"
     label: "Company Info"

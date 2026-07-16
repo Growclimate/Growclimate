@@ -57,6 +57,7 @@
                 :src="portableProducts[0].image"
                 :alt="portableProducts[0].model"
                 class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                loading="lazy"
                 @error="$event.target.style.display='none'"
               />
             </div>
@@ -160,6 +161,7 @@
                 :src="floorProducts[0].image"
                 :alt="floorProducts[0].model"
                 class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                loading="lazy"
                 @error="$event.target.style.display='none'"
               />
             </div>
@@ -284,6 +286,7 @@
                 :src="ceilingProducts[0].image"
                 :alt="ceilingProducts[0].model"
                 class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                loading="lazy"
                 @error="$event.target.style.display='none'"
               />
             </div>
@@ -398,6 +401,7 @@
                 :src="desiccantProducts[0].image"
                 :alt="desiccantProducts[0].model"
                 class="max-h-64 max-w-full object-contain rounded-xl"
+                loading="lazy"
                 @error="$event.target.style.display='none'"
               />
             </div>
@@ -528,6 +532,7 @@
                 :src="humidifiersData[0].image"
                 :alt="humidifiersData[0].model"
                 class="max-h-64 max-w-full object-contain rounded-xl shadow-sm"
+                loading="lazy"
                 @error="$event.target.style.display='none'"
               />
             </div>
@@ -710,8 +715,8 @@ import { useSEO } from '@/composables/useSEO'
 import { dehumidifiers, humidifiers, ventilation } from '../data/cms/index.js'
 
 useSEO({
-  title: 'Dehumidifiers & Humidifiers — Industrial Climate Control Products',
-  description: 'Portable, floor standing, ceiling/duct, and desiccant dehumidifiers plus industrial humidifiers and ventilation. R290/R32 refrigerants, Modbus control, CE/UL certified. OEM/ODM available.',
+  title: 'Dehumidifiers & Humidifiers — GrowClimate',
+  description: 'Portable, floor-standing, ceiling duct, and desiccant dehumidifiers plus industrial humidifiers. R290/R32, Modbus, CE/UL certified. OEM/ODM.',
   keywords: 'industrial dehumidifier, greenhouse dehumidifier, desiccant dehumidifier, portable dehumidifier commercial, ceiling duct dehumidifier, industrial humidifier, R290 dehumidifier, Modbus dehumidifier',
   url: 'https://growclimate.com/products',
 })

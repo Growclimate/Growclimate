@@ -81,6 +81,383 @@ const route = useRoute()
 const slug = route.params.slug
 
 const allPosts = {
+  'tomato-greenhouse-humidity-control': {
+    title: 'Tomato Greenhouse Humidity Control: Why It Matters & How to Get It Right',
+    category: 'Crop Science',
+    date: 'June 25, 2026',
+    readTime: 12,
+    image: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=1200&q=80',
+    excerpt: 'Humidity makes or breaks a tomato crop. Learn optimal RH levels by growth stage, how to prevent blight and blossom end rot, and how to choose the right dehumidifier for your tomato greenhouse.',
+    content: `
+      <p class="lead text-xl text-gray-600 mb-6 font-medium">Tomatoes are one of the most widely grown greenhouse crops in the world — and also one of the most sensitive to humidity. Get it right, and you will see vigorous growth, heavy fruit set, and premium quality. Get it wrong, and you face blossom drop, disease outbreaks, and crop losses that can wipe out an entire season. This guide explains exactly why humidity control matters for tomato greenhouses, what levels to target at each growth stage, and how to implement a reliable humidity management system.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Why Humidity Is Critical for Tomato Greenhouses</h2>
+      <p class="text-gray-700 mb-4">Tomatoes are originally subtropical plants. They thrive in warm, moderately humid conditions — but commercial greenhouse production creates a completely different microclimate. In a sealed or semi-sealed greenhouse, plant transpiration, irrigation evaporation, and limited air exchange push humidity levels far beyond what tomatoes can tolerate without stress.</p>
+      <p class="text-gray-700 mb-4">Humidity affects tomatoes through three interconnected mechanisms:</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Pollination and fruit set.</strong> Tomato flowers are self-pollinating, but they require dry air to release pollen effectively. When relative humidity exceeds 70% during flowering, pollen grains clump together and fail to disperse. The result is poor fruit set, misshapen fruit, and reduced yield. Many greenhouse growers do not realize that their low yield is caused by high humidity during the flowering window — not by nutrient deficiency or variety selection.</li>
+        <li><strong>Calcium uptake and blossom end rot.</strong> Calcium is transported through the plant via transpiration. When humidity is too high, transpiration slows, and calcium cannot reach the developing fruit. This causes blossom end rot — a black, sunken lesion on the bottom of the tomato that makes it unmarketable. It is a physiological disorder, not a disease, and it is entirely preventable with proper humidity management.</li>
+        <li><strong>Disease pressure.</strong> Tomato pathogens thrive in high humidity. <em>Botrytis cinerea</em> (gray mold), <em>Passalora fulva</em> (leaf mold), and <em>Phytophthora infestans</em> (late blight) all require sustained leaf wetness or RH above 85% to infect. A greenhouse running at 80–90% RH without dehumidification is a disease incubator.</li>
+      </ul>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1592841200221-a2cb3e8c4f0e?w=800&q=80" alt="tomato plants growing in commercial greenhouse with climate control" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Tomato greenhouse crops require precise humidity management for optimal pollination and disease prevention</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Optimal Humidity Levels for Tomatoes by Growth Stage</h2>
+      <p class="text-gray-700 mb-4">Tomatoes need different humidity levels at different stages of growth. The key principle is that humidity should gradually decrease as the plant matures, with the most critical period being flowering and early fruit development.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse">
+          <thead><tr class="bg-brand-50"><th class="p-3 text-left font-semibold">Growth Stage</th><th class="p-3 text-left font-semibold">Optimal RH (Day)</th><th class="p-3 text-left font-semibold">Optimal RH (Night)</th><th class="p-3 text-left font-semibold">Key Risk</th></tr></thead>
+          <tbody class="divide-y">
+            <tr><td class="p-3 font-semibold">Seedling</td><td class="p-3 font-mono">65–75%</td><td class="p-3 font-mono">70–80%</td><td class="p-3 text-gray-600">Damping-off, slow rooting</td></tr>
+            <tr><td class="p-3 font-semibold">Vegetative</td><td class="p-3 font-mono">60–70%</td><td class="p-3 font-mono">65–75%</td><td class="p-3 text-gray-600">Stretching, weak stems</td></tr>
+            <tr><td class="p-3 font-semibold">Flowering</td><td class="p-3 font-mono">55–65%</td><td class="p-3 font-mono">60–70%</td><td class="p-3 text-gray-600">Poor pollen release, blossom drop</td></tr>
+            <tr><td class="p-3 font-semibold">Early Fruit Set</td><td class="p-3 font-mono">60–70%</td><td class="p-3 font-mono">65–70%</td><td class="p-3 text-gray-600">Blossom end rot (calcium deficiency)</td></tr>
+            <tr><td class="p-3 font-semibold">Ripening</td><td class="p-3 font-mono">55–65%</td><td class="p-3 font-mono">60–70%</td><td class="p-3 text-gray-600">Cracking, botrytis, late blight</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-gray-700 mb-4">Notice the critical window during flowering: daytime RH should be kept between 55–65%. This is lower than most growers expect, and it is the single most impactful adjustment you can make to improve fruit set. If your greenhouse humidity consistently exceeds 70% during the day, pollination is already being compromised.</p>
+      <p class="text-gray-700 mb-4">The nighttime humidity range is slightly higher because cooler nighttime temperatures naturally raise RH. However, night is when condensation risk peaks — if humid air meets cooler leaf surfaces, dew forms on the leaves, creating the perfect conditions for fungal infection. A dehumidifier that runs through the night cycle is essential to prevent this dew formation.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Common Tomato Diseases Caused by Poor Humidity Control</h2>
+      <p class="text-gray-700 mb-4">Three devastating diseases are directly linked to humidity mismanagement in tomato greenhouses. Understanding each one helps you see why humidity control is not optional — it is the first line of defense.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Botrytis Gray Mold</h3>
+      <p class="text-gray-700 mb-4"><em>Botrytis cinerea</em> is the most common and destructive pathogen in greenhouse tomatoes. It attacks every part of the plant — stems, leaves, flowers, and fruit. Gray mold thrives when RH exceeds 85% for more than 4–6 hours, especially at temperatures of 18–24°C. On fruit, it appears as a soft, water-soaked rot covered in gray fuzzy spores. On stems, it causes cankers that can girdle and kill the entire plant. The pathogen spreads rapidly through splashing water and air currents, so a single infected plant can quickly contaminate an entire greenhouse. Maintaining RH below 75% with active <a href="/products/dehumidifiers" class="text-brand-600 hover:text-brand-700 underline">dehumidification</a> is the most effective prevention strategy.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Leaf Mold (Passalora fulva)</h3>
+      <p class="text-gray-700 mb-4">Leaf mold is specific to tomatoes and thrives in greenhouses with RH above 85% and poor air circulation. It first appears as pale yellow spots on the upper leaf surface, with olive-green velvety spore masses on the underside. As the disease progresses, leaves yellow, curl, and drop prematurely. Severe defoliation exposes fruit to sunscald and reduces photosynthetic capacity, stunting the plant and reducing yield. Leaf mold is particularly insidious because the spores can survive in crop debris for months, reinfecting successive crops unless the greenhouse is thoroughly sanitized between cycles.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Late Blight (Phytophthora infestans)</h3>
+      <p class="text-gray-700 mb-4">Late blight is the disease that caused the Irish potato famine, and it is equally devastating to tomatoes. It spreads explosively when humidity is high (above 90%) and temperatures are cool (13–18°C). Dark, water-soaked lesions appear on leaves and stems, often with a white mold ring at the edge. On fruit, firm, dark brown spots develop and rapidly engulf the entire tomato. Late blight can destroy a greenhouse tomato crop in 3–5 days if conditions are favorable. While it requires fungicide treatment once present, the primary prevention is humidity control — keeping RH below 80% and preventing leaf wetness eliminates the conditions the pathogen needs to establish.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="healthy tomato plants with proper greenhouse humidity and climate control" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Healthy tomato plants grown with precise humidity control — vigorous growth, no disease pressure</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Humidity Control Solutions for Tomato Greenhouses</h2>
+      <p class="text-gray-700 mb-4">There are four main approaches to managing humidity in a tomato greenhouse. Each plays a role, but only dehumidification provides reliable, climate-independent control.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse">
+          <thead><tr class="bg-brand-50"><th class="p-3 text-left font-semibold">Method</th><th class="p-3 text-left font-semibold">How It Works</th><th class="p-3 text-left font-semibold">Best For</th><th class="p-3 text-left font-semibold">Limitation</th></tr></thead>
+          <tbody class="divide-y">
+            <tr>
+              <td class="p-3 font-semibold">Ventilation</td>
+              <td class="p-3 text-gray-600">Exchanges humid indoor air with drier outdoor air</td>
+              <td class="p-3 text-gray-600">Daytime in dry climates</td>
+              <td class="p-3 text-gray-600">Ineffective when outdoor RH is high; loses heat and CO₂</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Air Circulation</td>
+              <td class="p-3 text-gray-600">Horizontal airflow fans mix air to prevent microclimates</td>
+              <td class="p-3 text-gray-600">Supplementing other methods</td>
+              <td class="p-3 text-gray-600">Reduces condensation but does not remove moisture</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Heating</td>
+              <td class="p-3 text-gray-600">Raising temperature lowers relative humidity</td>
+              <td class="p-3 text-gray-600">Night-time humidity spikes</td>
+              <td class="p-3 text-gray-600">Expensive; does not remove water, just dilutes it</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Dehumidification</td>
+              <td class="p-3 text-gray-600">Actively condenses and removes moisture from air</td>
+              <td class="p-3 text-gray-600">All conditions — the only reliable method</td>
+              <td class="p-3 text-gray-600">Requires equipment investment and electricity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-gray-700 mb-4">For commercial tomato greenhouses, dehumidification is the backbone of humidity control. Ventilation and heating can supplement, but they cannot be relied upon as the primary method — especially during the critical night period when outdoor dew points are high, or in humid climates where outside air is as moist as the greenhouse air.</p>
+      <p class="text-gray-700 mb-4">An added benefit of dehumidification in cold-climate greenhouses: the dehumidifier recovers latent heat from the moisture it condenses. In a sealed winter greenhouse, this recovered heat can offset 20–40% of heating costs — a significant energy advantage over ventilation-based humidity control that exhausts heated air.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">How to Choose the Right Dehumidifier for Your Tomato Greenhouse</h2>
+      <p class="text-gray-700 mb-4">Sizing a dehumidifier for a tomato greenhouse follows a straightforward calculation. You need to match the unit's moisture removal capacity to your greenhouse's total moisture load.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 1: Calculate Moisture Load</h3>
+      <div class="bg-gray-100 rounded-xl p-5 my-6 font-mono text-sm">
+        <p class="mb-2"><strong>Total Moisture Load (L/day) = Plant Transpiration + Irrigation Evaporation + Soil/Floor Evaporation</strong></p>
+        <p class="text-gray-500 text-xs mt-3">Transpiration: ~2.5–4 L/day per kW of grow lighting (varies by crop density)</p>
+        <p class="text-gray-500 text-xs">Irrigation evaporation: ~10–15% of daily irrigation volume</p>
+        <p class="text-gray-500 text-xs">Soil/floor: ~0.5–1 L/day per m² for soil-grown; negligible for hydroponic</p>
+      </div>
+      <p class="text-gray-700 mb-4">For a 500 m² tomato greenhouse with 20 kW of supplemental lighting and 500 L/day irrigation:</p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700 mb-4">
+        <li>Transpiration: 20 kW × 3 L/day = 60 L/day</li>
+        <li>Irrigation evaporation: 500 L × 12% = 60 L/day</li>
+        <li>Soil evaporation: 500 m² × 0.7 L/day = 350 L/day</li>
+        <li><strong>Total: ~470 L/day</strong></li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 2: Apply Safety Factor</h3>
+      <p class="text-gray-700 mb-4">Oversize by 20–30% to handle peak moisture events (post-irrigation, summer humidity spikes). For 470 L/day: 470 × 1.25 = <strong>588 L/day rated capacity minimum</strong>.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 3: Select Equipment</h3>
+      <p class="text-gray-700 mb-4">GrowClimate offers commercial dehumidifiers designed for greenhouse environments, with RS485/Modbus connectivity for integration with climate control systems:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+        <li><strong>GRO-385L</strong> — 385 L/day, suitable for 200–400 m² greenhouses (pair two units for 500 m²)</li>
+        <li><strong>GRO-720L</strong> — 720 L/day, handles 500–800 m² in a single unit</li>
+        <li><strong>GD-480L</strong> — Ceiling-mounted, ideal when floor space is at a premium</li>
+      </ul>
+      <p class="text-gray-700 mb-4">For greenhouses in cold climates where winter temperatures drop below 10°C, consider GrowClimate's <a href="/blog/desiccant-vs-compressor" class="text-brand-600 hover:text-brand-700 underline">desiccant dehumidifier series</a>, which maintain full performance at temperatures as low as -10°C.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 4: Placement Strategy</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+        <li>Position dehumidifiers to draw air from the most humid zones — typically near the plant canopy and at the low points of the greenhouse where cold, moist air settles</li>
+        <li>Direct dry air output along the length of the greenhouse to ensure even distribution — avoid short-circuiting where dry air returns directly to the intake</li>
+        <li>For greenhouses over 300 m², use two or more units at opposite ends rather than one large unit — this improves humidity uniformity and provides redundancy if one unit fails</li>
+        <li>Integrate with horizontal airflow fans (HAF) to maintain consistent air movement across the canopy, preventing dead zones where humidity can spike</li>
+      </ul>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80" alt="commercial dehumidifier installed in tomato greenhouse for humidity control" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Industrial dehumidifiers with Modbus integration provide automated, climate-independent humidity control for tomato greenhouses</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Best Practices for Tomato Greenhouse Humidity Management</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Monitor continuously.</strong> Install humidity sensors at canopy height in at least 3 locations — center and both ends of the greenhouse. RH can vary by 10–15% between different zones.</li>
+        <li><strong>Control the night cycle.</strong> Nighttime is when humidity spikes and condensation forms on leaves. Program your dehumidifier to maintain RH below 75% through the night, not just during the day.</li>
+        <li><strong>Avoid wetting foliage.</strong> Use drip irrigation rather than overhead sprinklers. Wet leaves are the primary entry point for botrytis and late blight. If overhead irrigation is unavoidable, run it early enough in the day that leaves dry completely before nightfall.</li>
+        <li><strong>Prune for airflow.</strong> Remove lower leaves and suckers regularly to improve air circulation through the canopy. Dense foliage traps humid air and creates microclimates where disease can establish undetected.</li>
+        <li><strong>Transition gradually.</strong> When moving between growth stages, change humidity setpoints by no more than 5% per day. Abrupt changes stress the plant and can trigger physiological disorders.</li>
+        <li><strong>Sanitize between crops.</strong> After removing the old crop, run the dehumidifier at maximum capacity with the greenhouse sealed to dry out any residual moisture in the soil or structure before planting the next crop. This breaks the disease cycle.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <div class="space-y-6 my-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">What humidity level is best for tomato greenhouses?</h3>
+          <p class="text-gray-700">For mature tomato plants, target 60–70% RH during the day and 65–75% at night. During flowering, reduce daytime RH to 55–65% to ensure proper pollen release. The most critical rule: never let RH exceed 85% for more than 4 consecutive hours, as this is the threshold for botrytis and leaf mold infection.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">Why are my tomato flowers dropping without setting fruit?</h3>
+          <p class="text-gray-700">The most common cause is high humidity during flowering. Tomato pollen becomes sticky and clumps together when RH exceeds 70%, preventing it from falling onto the stigma. If you are seeing flower drop, check your daytime humidity during the flowering period — it should be between 55–65%. A dedicated greenhouse dehumidifier is the most effective solution.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">Can I use ventilation instead of a dehumidifier for my tomato greenhouse?</h3>
+          <p class="text-gray-700">Ventilation can help during the day in dry climates, but it is unreliable as a primary method. At night — when humidity control is most critical — outdoor air is often as humid as the greenhouse air. Ventilation also wastes heated air and CO₂, increasing operating costs. For commercial tomato production, a dehumidifier is the only method that provides reliable, year-round humidity control regardless of weather conditions. Learn more about <a href="/blog/ultimate-guide-greenhouse-grow-room-humidity-control" class="text-brand-600 hover:text-brand-700 underline">greenhouse humidity control fundamentals</a>.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">How does humidity cause blossom end rot in tomatoes?</h3>
+          <p class="text-gray-700">Blossom end rot is caused by calcium deficiency in the fruit, but the root cause is often high humidity. Calcium moves through the plant via the transpiration stream. When humidity is too high, transpiration slows, and calcium cannot reach the rapidly expanding fruit tissue. The result is cell membrane breakdown at the blossom end of the fruit, forming a dark, sunken lesion. Proper humidity management — keeping daytime RH at 60–70% during early fruit development — is the most effective prevention.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">What size dehumidifier do I need for a tomato greenhouse?</h3>
+          <p class="text-gray-700">Calculate your total daily moisture load (transpiration + irrigation evaporation + soil evaporation), then add a 20–30% safety margin. For a typical 500 m² tomato greenhouse, you will need approximately 500–600 L/day of dehumidification capacity. This can be achieved with one GrowClimate GRO-720L unit or two GRO-385L units placed at opposite ends of the greenhouse. <a href="/contact" class="text-brand-600 hover:text-brand-700 underline">Contact our engineering team</a> for a free sizing calculation tailored to your facility.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Conclusion</h2>
+      <p class="text-gray-700 mb-4">Humidity control is not an optional upgrade for a tomato greenhouse — it is a fundamental requirement for profitable production. The difference between a greenhouse operating at 85% RH and one at 65% RH is the difference between a healthy, high-yielding crop and a disease-ridden, low-yielding one. By understanding the specific humidity needs of tomatoes at each growth stage, investing in properly sized dehumidification equipment, and following best practices for monitoring and airflow management, you can dramatically improve fruit set, reduce disease pressure, and increase both yield and quality.</p>
+      <p class="text-gray-700 mb-4">If you are planning a new tomato greenhouse or upgrading your existing climate control system, <a href="/contact" class="text-brand-600 hover:text-brand-700 underline">contact GrowClimate's application engineering team</a> for a free consultation. We provide moisture load calculations, equipment sizing, and climate control strategies tailored to your specific crop, climate, and facility.</p>
+    `
+  },
+  'ultimate-guide-greenhouse-grow-room-humidity-control': {
+    title: 'The Ultimate Guide to Greenhouse & Grow Room Humidity Control: Prevent Mold, Boost Yield and Quality',
+    category: 'Growing Science',
+    date: 'May 27, 2026',
+    readTime: 15,
+    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1200&q=80',
+    excerpt: 'Master humidity control in your greenhouse or grow room. Learn optimal RH levels by growth stage, prevent mold and root rot, and discover how to choose the right dehumidifier for healthier plants and higher yields.',
+    content: `
+      <p class="lead text-xl text-gray-600 mb-6 font-medium">Humidity is the silent variable that makes or breaks a grow. Too high and mold destroys your crop overnight. Too low and your plants stop growing. In commercial greenhouses and indoor grow rooms, precise humidity control is not optional — it is the single most important investment you can make after lighting and irrigation. This guide covers everything you need to know about indoor grow humidity levels, from the science behind plant transpiration to choosing the right grow room dehumidifier for your facility.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Why Humidity Control Is the Key to Growing Success</h2>
+      <p class="text-gray-700 mb-4">Relative humidity (RH) directly affects three critical plant processes: <strong>photosynthesis</strong>, <strong>transpiration</strong>, and <strong>disease susceptibility</strong>. When humidity is within the optimal range, plants efficiently absorb nutrients through transpiration, maintain turgor pressure for structural support, and keep stomata open for CO₂ uptake. When humidity drifts outside that range, every one of these processes is compromised.</p>
+      <p class="text-gray-700 mb-4">Transpiration is the engine that drives nutrient uptake. Plants pull water from the roots and release it as vapor through stomata on the leaf surface. This process is governed by the vapor pressure deficit (VPD) — the difference between the moisture inside the leaf and the surrounding air. A moderate VPD drives healthy transpiration. Too low (high humidity), and transpiration stalls — nutrients stop moving, and plants become susceptible to calcium deficiencies like blossom end rot. Too high (low humidity), and transpiration accelerates beyond what the root system can supply — causing wilting, tip burn, and stunted growth.</p>
+      <p class="text-gray-700 mb-4">Beyond plant physiology, humidity is the primary environmental factor driving fungal and bacterial disease. Most plant pathogens require sustained leaf wetness or RH above 85% to germinate and infect. A commercial greenhouse operating at 80–90% RH without active dehumidification is essentially an incubator for botrytis, powdery mildew, and pythium root rot.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80" alt="commercial greenhouse humidity control with climate monitoring systems" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Commercial greenhouses require active humidity management to prevent condensation and disease</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Humidity Requirements by Growth Stage</h2>
+      <p class="text-gray-700 mb-4">Different growth stages demand different humidity levels. Seedlings and clones need high humidity to prevent water loss before root systems develop. Vegetative plants thrive at moderate humidity. Flowering plants need lower humidity to prevent mold and encourage resin production. Here is a detailed breakdown:</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse">
+          <thead><tr class="bg-brand-50"><th class="p-3 text-left font-semibold">Growth Stage</th><th class="p-3 text-left font-semibold">Optimal RH</th><th class="p-3 text-left font-semibold">VPD (kPa)</th><th class="p-3 text-left font-semibold">Key Risk If Wrong</th></tr></thead>
+          <tbody class="divide-y">
+            <tr><td class="p-3 font-semibold">Seedling / Clone</td><td class="p-3 font-mono">70–80%</td><td class="p-3 font-mono">0.4–0.8</td><td class="p-3 text-gray-600">Drying out, failed rooting</td></tr>
+            <tr><td class="p-3 font-semibold">Early Vegetative</td><td class="p-3 font-mono">60–70%</td><td class="p-3 font-mono">0.8–1.0</td><td class="p-3 text-gray-600">Slow growth, nutrient lockout</td></tr>
+            <tr><td class="p-3 font-semibold">Late Vegetative</td><td class="p-3 font-mono">55–65%</td><td class="p-3 font-mono">0.8–1.2</td><td class="p-3 text-gray-600">Stretching, weak stems</td></tr>
+            <tr><td class="p-3 font-semibold">Early Flowering</td><td class="p-3 font-mono">45–55%</td><td class="p-3 font-mono">1.0–1.5</td><td class="p-3 text-gray-600">Mold onset, poor resin</td></tr>
+            <tr><td class="p-3 font-semibold">Late Flowering</td><td class="p-3 font-mono">40–50%</td><td class="p-3 font-mono">1.2–1.5</td><td class="p-3 text-gray-600">Bud rot, powdery mildew</td></tr>
+            <tr><td class="p-3 font-semibold">Fruiting (Tomato, Pepper)</td><td class="p-3 font-mono">60–70%</td><td class="p-3 font-mono">0.8–1.2</td><td class="p-3 text-gray-600">Blossom end rot, cracking</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-gray-700 mb-4">The transition between stages is as important as the setpoints themselves. Abrupt humidity changes stress plants and trigger defense responses that divert energy away from growth and yield. Program your climate controller for gradual transitions — aim for no more than 5% RH change per hour when shifting between growth stages.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">The Fatal Consequences of High Humidity</h2>
+      <p class="text-gray-700 mb-4">Sustained high humidity is the number one cause of crop loss in controlled-environment agriculture. Here are the three most devastating threats:</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Botrytis (Gray Mold / Bud Rot)</h3>
+      <p class="text-gray-700 mb-4"><em>Botrytis cinerea</em> spores are present in virtually every grow environment. They remain dormant until RH exceeds 85% for more than 4–6 consecutive hours with temperatures between 18–24°C. Once activated, botrytis can destroy an entire flowering crop in 48–72 hours. The mold typically attacks dense flower clusters from the inside out — by the time you see it on the surface, the interior is already colonized. Prevention requires maintaining RH below 55% during flowering and ensuring adequate air circulation through the plant canopy. A properly sized <a href="/products/dehumidifiers" class="text-brand-600 hover:text-brand-700 underline">grow room dehumidifier</a> is the most effective tool for preventing botrytis outbreaks.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Powdery Mildew</h3>
+      <p class="text-gray-700 mb-4">Unlike botrytis, powdery mildew does not require leaf wetness — it thrives at 50–70% RH with poor air circulation. It appears as white powdery spots on leaf surfaces and spreads rapidly in stagnant, humid environments. Once established, powdery mildew reduces photosynthesis by covering leaf surfaces and can render flowering crops unmarketable. The most effective prevention is maintaining airflow above 0.5 m/s across the canopy and keeping humidity within the target range for each growth stage.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Pythium Root Rot</h3>
+      <p class="text-gray-700 mb-4"><em>Pythium</em> species are water-borne pathogens that thrive in saturated growing media. When humidity is too high, plants transpire less, which means they take up less water from the root zone. The result is chronically wet growing media — the perfect environment for pythium. Infected roots turn brown and mushy, losing their ability to absorb water and nutrients. In hydroponic systems, pythium can spread through the entire nutrient reservoir in days. Root rot is particularly insidious because the symptoms above ground (wilting, yellowing) mimic nutrient deficiency, delaying correct diagnosis until the root system is severely damaged.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&q=80" alt="healthy plant leaves showing proper humidity levels in indoor grow room" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Healthy, vigorous plant growth requires precise humidity management at every stage</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">The Negative Effects of Low Humidity</h2>
+      <p class="text-gray-700 mb-4">While high humidity gets most of the attention, low humidity is equally damaging. When RH drops below 40%, several problems emerge:</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Rapid transpiration exceeds water uptake.</strong> Plants lose water through stomata faster than roots can absorb it. This causes cellular dehydration, leaf curling, and tip burn — especially in fast-growing crops like lettuce and herbs.</li>
+        <li><strong>Stomatal closure.</strong> When water loss exceeds uptake, plants close their stomata as a survival mechanism. Closed stomata stop CO₂ intake, which halts photosynthesis. Growth stagnates, and yield potential is permanently lost for the affected period.</li>
+        <li><strong>Nutrient concentration spikes.</strong> In hydroponic systems, low humidity drives faster water uptake from the reservoir, concentrating the nutrient solution. This can push EC above safe levels and cause nutrient toxicity — particularly nitrogen and potassium.</li>
+        <li><strong>Increased pest vulnerability.</strong> Spider mites thrive in low-humidity environments. They reproduce faster and cause more damage when RH is below 45%. Many beneficial insects (predatory mites, lacewings) also perform poorly in dry conditions, reducing the effectiveness of biological pest control.</li>
+      </ul>
+      <p class="text-gray-700 mb-4">For greenhouse operations in arid climates or facilities running high-intensity lighting that heats the air, low humidity can be a persistent problem. Supplemental <a href="/products/humidifiers" class="text-brand-600 hover:text-brand-700 underline">humidification</a> — typically ultrasonic systems — may be required to maintain minimum RH thresholds during peak lighting periods.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Humidity Control Methods Compared</h2>
+      <p class="text-gray-700 mb-4">There are three primary approaches to managing humidity in greenhouses and grow rooms. Each has a role, but they are not equally effective as standalone solutions:</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse">
+          <thead><tr class="bg-brand-50"><th class="p-3 text-left font-semibold">Method</th><th class="p-3 text-left font-semibold">How It Works</th><th class="p-3 text-left font-semibold">Strengths</th><th class="p-3 text-left font-semibold">Limitations</th></tr></thead>
+          <tbody class="divide-y">
+            <tr>
+              <td class="p-3 font-semibold">Ventilation</td>
+              <td class="p-3 text-gray-600">Exchanges moist indoor air with drier outdoor air</td>
+              <td class="p-3 text-gray-600">Low energy cost; also refreshes CO₂</td>
+              <td class="p-3 text-gray-600">Depends on outdoor conditions; loses heat/CO₂; ineffective in humid climates</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Humidification</td>
+              <td class="p-3 text-gray-600">Adds moisture via ultrasonic or evaporative systems</td>
+              <td class="p-3 text-gray-600">Essential for propagation and arid climates</td>
+              <td class="p-3 text-gray-600">Only raises RH; cannot reduce humidity; risk of over-saturation</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Dehumidification</td>
+              <td class="p-3 text-gray-600">Actively removes moisture from air via condensation or desiccant</td>
+              <td class="p-3 text-gray-600">Works in any climate; precise RH control; preserves heat and CO₂</td>
+              <td class="p-3 text-gray-600">Higher energy cost; requires equipment investment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-gray-700 mb-4">For commercial operations, <strong>dehumidification is the only method that provides reliable, climate-independent humidity control</strong>. Ventilation is a useful supplement when outdoor conditions are favorable, but it cannot be relied upon during the critical night period when outdoor dew points are high or during summer months when outside air may be even more humid than the grow room. A properly specified dehumidifier maintains your target RH regardless of weather, season, or time of day.</p>
+      <p class="text-gray-700 mb-4">Additionally, dehumidifiers recapture latent heat from the moisture they condense. In a closed greenhouse during winter, this "free" heat can offset 30–50% of heating costs — a significant energy advantage over ventilation-based humidity control that exhausts heated air.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80" alt="industrial dehumidifier installed in commercial grow room for humidity control" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Commercial dehumidifiers provide precise, climate-independent humidity control for grow rooms and greenhouses</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">How to Choose the Right Grow Room Dehumidifier</h2>
+      <p class="text-gray-700 mb-4">Selecting the correct dehumidifier is a calculation, not a guess. You need to match the unit's moisture removal capacity to your facility's total moisture load. Here is the step-by-step process:</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 1: Calculate Your Moisture Load</h3>
+      <p class="text-gray-700 mb-4">The total moisture you need to remove per day comes from three sources:</p>
+      <div class="bg-gray-100 rounded-xl p-5 my-6 font-mono text-sm">
+        <p class="mb-2"><strong>Total Moisture Load (L/day) = Plant Transpiration + Irrigation Evaporation + Infiltration</strong></p>
+        <p class="text-gray-500 text-xs mt-3">Plant transpiration: ~3 L/day per kW of grow lighting (rule of thumb)</p>
+        <p class="text-gray-500 text-xs">Irrigation evaporation: ~10–20% of daily irrigation volume</p>
+        <p class="text-gray-500 text-xs">Infiltration: depends on ventilation rate and outdoor dew point</p>
+      </div>
+      <p class="text-gray-700 mb-4">For example, a 200 m² grow room with 15 kW of LED lighting, 200 L/day irrigation, and minimal infiltration generates approximately:</p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700 mb-4">
+        <li>Transpiration: 15 kW × 3 L/day = 45 L/day</li>
+        <li>Irrigation evaporation: 200 L × 15% = 30 L/day</li>
+        <li>Infiltration: ~10 L/day (for semi-sealed room)</li>
+        <li><strong>Total: ~85 L/day</strong></li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 2: Apply a Safety Factor</h3>
+      <p class="text-gray-700 mb-4">Always oversize by 20–30% to handle peak moisture events (post-irrigation, summer humidity spikes) and equipment degradation over time. For our 85 L/day example: 85 × 1.25 = <strong>106 L/day rated capacity minimum</strong>.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 3: Match Capacity to Equipment</h3>
+      <p class="text-gray-700 mb-4">GrowClimate offers a range of compressor-based dehumidifiers designed specifically for grow room and greenhouse environments:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+        <li><strong>GRO-165L</strong> — 165 L/day, ideal for small grow rooms (50–100 m²)</li>
+        <li><strong>GRO-288L</strong> — 288 L/day, for medium commercial rooms (100–200 m²)</li>
+        <li><strong>GRO-385L</strong> — 385 L/day, for large greenhouses (200–400 m²)</li>
+        <li><strong>GRO-720L / GRO-960L</strong> — 720–960 L/day, for industrial-scale facilities</li>
+        <li><strong>GD-240L / GD-480L</strong> — Ceiling-mounted units for grow rooms where floor space is limited</li>
+      </ul>
+      <p class="text-gray-700 mb-4">All models feature <strong>RS485/Modbus connectivity</strong> for integration with climate controllers and building management systems, allowing automated RH setpoint control and remote monitoring.</p>
+      <p class="text-gray-700 mb-4">For facilities requiring humidity below 35% RH — such as seed storage, drying rooms, or cold storage — explore GrowClimate's <a href="/blog/desiccant-vs-compressor" class="text-brand-600 hover:text-brand-700 underline">desiccant dehumidifier series</a> which operate effectively at temperatures as low as -10°C.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Step 4: Consider Placement and Airflow</h3>
+      <p class="text-gray-700 mb-4">Even the best dehumidifier underperforms if placed incorrectly. Follow these principles:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+        <li>Position the dehumidifier where it can draw the most humid air — typically near the plant canopy or at the low point of the room where moist air settles</li>
+        <li>Ensure the dry air output circulates back through the grow space rather than short-circuiting directly back to the intake</li>
+        <li>For rooms over 150 m², consider two smaller units at opposite ends rather than one large unit — this improves humidity uniformity and provides redundancy</li>
+        <li>Ceiling-mounted units like the GD series are ideal for rooms with limited floor space or where equipment on the floor would obstruct airflow</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <div class="space-y-6 my-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">What is the ideal humidity for a grow room?</h3>
+          <p class="text-gray-700">It depends on the growth stage. Seedlings and clones need 70–80% RH, vegetative plants thrive at 55–70% RH, and flowering plants require 40–55% RH to prevent mold. The key is to adjust humidity downward as plants mature, especially during the flowering stage when dense buds are most vulnerable to botrytis.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">How do I control humidity in my grow room?</h3>
+          <p class="text-gray-700">The three main methods are ventilation, humidification, and dehumidification. For reliable control in any climate, a dedicated grow room dehumidifier is essential. Ventilation can supplement dehumidification when outdoor air is drier than indoor air, but it should not be your primary method — it wastes conditioned air and is unreliable during humid weather. Read more about the <a href="/blog/vpd-explained" class="text-brand-600 hover:text-brand-700 underline">science of VPD-based climate control</a>.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">What humidity level prevents mold in a greenhouse?</h3>
+          <p class="text-gray-700">Most plant pathogens require sustained RH above 85% to germinate. Maintaining greenhouse humidity below 75% during the day and below 80% at night dramatically reduces disease pressure. During flowering, target RH below 55% for maximum mold prevention. Active dehumidification is the most reliable way to maintain these levels, especially during the night cycle when temperatures drop and RH naturally spikes.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">What humidity should I target for the flowering stage?</h3>
+          <p class="text-gray-700">For most flowering crops, target 45–55% RH during early flowering and 40–50% RH during late flowering. Lower humidity during flowering encourages resin and essential oil production while preventing bud rot and powdery mildew. The transition from vegetative to flowering humidity should be gradual — reduce RH by no more than 5% per day over 3–5 days.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">Do dehumidifiers add heat to the grow room?</h3>
+          <p class="text-gray-700">Yes. Compressor dehumidifiers release the latent heat from condensed water vapor back into the room, plus the heat from the compressor motor itself. A unit rated at 2 kW input power adds approximately 2 kW of heat to the space. In winter, this is beneficial — it reduces heating costs. In summer, you may need additional cooling capacity to compensate. Factor this into your thermal load calculations when designing your climate control system.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-dark-900 mb-2">Can one dehumidifier handle both my veg and flower rooms?</h3>
+          <p class="text-gray-700">Not effectively. Veg rooms typically require 60–70% RH while flower rooms need 40–50% RH — a difference of 20% or more. A shared dehumidifier cannot maintain two different setpoints simultaneously. The most effective approach is separate dehumidifiers for each room, each with its own hygrostat controller. If budget is a constraint, use ducted connections with motorized dampers controlled by a central system that prioritizes the room furthest from its setpoint.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Key Takeaways</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Humidity control is non-negotiable</strong> for commercial growing — it affects photosynthesis, nutrient uptake, disease pressure, and final yield quality</li>
+        <li><strong>Match RH to growth stage:</strong> 70–80% for seedlings, 55–70% for vegetative, 40–55% for flowering</li>
+        <li><strong>High humidity kills crops</strong> through botrytis, powdery mildew, and pythium root rot — all preventable with proper dehumidification</li>
+        <li><strong>Low humidity stunts growth</strong> by forcing stomatal closure and halting photosynthesis</li>
+        <li><strong>Dehumidifiers are the only reliable method</strong> for climate-independent humidity control in greenhouses and grow rooms</li>
+        <li><strong>Size your dehumidifier correctly:</strong> calculate total moisture load, add 20–30% safety margin, and select the appropriate capacity unit</li>
+      </ul>
+      <p class="text-gray-700 mb-4">Whether you are running a 50 m² indoor grow or a 5,000 m² commercial greenhouse, the principles are the same: measure your moisture load, specify the right equipment, and maintain stage-appropriate humidity setpoints with automated control. For help sizing and specifying dehumidification equipment for your facility, <a href="/contact" class="text-brand-600 hover:text-brand-700 underline">contact GrowClimate's application engineering team</a> — we provide free climate load calculations and equipment recommendations tailored to your specific growing environment.</p>
+    `
+  },
   'greenhouse-humidity-management-guide': {
     title: 'Complete Guide to Greenhouse Humidity Management',
     category: 'Growing Science',
@@ -231,6 +608,147 @@ const allPosts = {
         <li><strong>GRO-288L or GRO-385L</strong> dehumidifiers to create the controlled dry-down during spawn run and to prevent condensation during cool night cycles</li>
         <li>Separate controllers for day/night cycling — mushrooms need distinct climate phases, not constant conditions</li>
       </ul>
+    `
+  },
+  'mushroom-growing-humidity-control': {
+    title: 'Mushroom Growing Humidity Control: The Complete Guide to Maximizing Yield and Preventing Crop Loss',
+    category: 'Crop Science',
+    date: 'July 16, 2026',
+    readTime: 10,
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
+    excerpt: 'Master mushroom growing humidity control with stage-by-stage RH targets for oyster, shiitake, enoki, and king oyster mushrooms. Learn how to prevent blotch, maximize yields, and build a climate-ready mushroom greenhouse.',
+    keywords: 'mushroom growing humidity control, mushroom room humidity management, greenhouse humidity control for mushroom cultivation, commercial mushroom farming humidity, mushroom grow room climate control, mushroom plantation greenhouse construction, agricultural climate distributor, mushroom yield improvement by humidity control',
+    content: `
+      <p class="lead text-xl text-gray-600 mb-6 font-medium">If you grow mushrooms commercially, you already know: humidity is not a secondary variable — it is the single most critical climate parameter determining whether your crop thrives or fails. Unlike green plants that regulate moisture through stomata, mushroom fruiting bodies are exposed entirely to ambient air. They are 85–95% water by weight. When the air is too dry, they lose moisture faster than mycelium can supply it. When the air is too wet, competitor molds and bacterial diseases take over.</p>
+
+      <p class="text-gray-700 mb-4">Effective <strong>mushroom growing humidity control</strong> is what separates a 15% biological efficiency operation from one hitting 100%+. Whether you are a small-scale grower with a converted shipping container or a commercial operation running multiple mushroom grow rooms, understanding and managing humidity at every growth stage is the foundation of profitable yields.</p>
+
+      <p class="text-gray-700 mb-4">This guide breaks down exactly what humidity levels each mushroom species needs, what goes wrong when those levels are off, and how to build a humidity control system that works for your scale — from natural cultivation to fully automated smart greenhouses.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Optimal Humidity Parameters by Mushroom Type and Growth Stage</h2>
+      <p class="text-gray-700 mb-4">Different mushroom species have distinct humidity requirements across three phases: spawn run (mycelial colonization), pinning (primordia formation), and fruiting (maturation). Getting these numbers right is the core of <strong>mushroom room humidity management</strong>.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse">
+          <thead><tr class="bg-brand-50"><th class="p-3 text-left font-semibold">Mushroom Type</th><th class="p-3 text-left font-semibold">Spawn Run RH</th><th class="p-3 text-left font-semibold">Pinning RH</th><th class="p-3 text-left font-semibold">Fruiting RH</th><th class="p-3 text-left font-semibold">CO₂ Sensitivity</th></tr></thead>
+          <tbody class="divide-y">
+            <tr><td class="p-3 font-semibold">Oyster (Pleurotus)</td><td class="p-3 font-mono">80–85%</td><td class="p-3 font-mono">90–95%</td><td class="p-3 font-mono">85–92%</td><td class="p-3 text-gray-600">High</td></tr>
+            <tr><td class="p-3 font-semibold">Shiitake (Lentinula)</td><td class="p-3 font-mono">60–70%</td><td class="p-3 font-mono">85–90%</td><td class="p-3 font-mono">80–85%</td><td class="p-3 text-gray-600">Medium</td></tr>
+            <tr><td class="p-3 font-semibold">Enoki (Flammulina)</td><td class="p-3 font-mono">70–75%</td><td class="p-3 font-mono">90–95%</td><td class="p-3 font-mono">85–90%</td><td class="p-3 text-gray-600">Very High</td></tr>
+            <tr><td class="p-3 font-semibold">King Oyster (P. eryngii)</td><td class="p-3 font-mono">70–75%</td><td class="p-3 font-mono">90–95%</td><td class="p-3 font-mono">85–90%</td><td class="p-3 text-gray-600">High</td></tr>
+            <tr><td class="p-3 font-semibold">Button (Agaricus)</td><td class="p-3 font-mono">70–75%</td><td class="p-3 font-mono">95–98%</td><td class="p-3 font-mono">85–90%</td><td class="p-3 text-gray-600">Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=800&q=80" alt="commercial mushroom grow room with oyster shiitake and enoki varieties growing in humidity-controlled environment" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Different mushroom varieties require species-specific humidity profiles across spawn run, pinning, and fruiting stages</figcaption>
+      </figure>
+
+      <p class="text-gray-700 mb-4">Key takeaways from this table:</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Pinning requires the highest humidity</strong> (90–98% RH). This is when primordia form — if the air dries out during this 3–5 day window, pins abort and will not recover.</li>
+        <li><strong>Spawn run needs the lowest humidity.</strong> Excess moisture during colonization encourages Trichoderma green mold and wet-spot bacteria.</li>
+        <li><strong>Fruiting RH is species-dependent</strong> but generally falls between 80–92%. The goal is high enough to support fruit body expansion, but not so high that condensation drips onto caps.</li>
+      </ul>
+
+      <p class="text-gray-700 mb-4">For <strong>commercial mushroom farming humidity</strong> management, the most common mistake is running a single RH setpoint throughout the entire cycle. A proper <strong>mushroom grow room climate control</strong> system must support stage-based scheduling — automatically shifting from 75% during spawn run to 95% during pinning, then back to 85% for fruiting.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">What Happens When Humidity Goes Wrong</h2>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Humidity Too Low: Cracked Caps, Stunted Growth, and Aborts</h3>
+      <p class="text-gray-700 mb-4">When RH drops below 80% during fruiting, mushrooms lose water to the air faster than they can absorb it from the substrate. The visible symptoms are unmistakable:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+        <li><strong>Cracked and split caps</strong> — the outer tissue dries and tears as the mushroom tries to expand</li>
+        <li><strong>Stunted fruiting bodies</strong> — mushrooms remain small and lightweight, reducing harvest weight by 30–50%</li>
+        <li><strong>Pin aborts</strong> — primordia form but stop developing and brown off within 24–48 hours</li>
+        <li><strong>Dry, fibrous stems</strong> — commercial quality drops, and mushrooms become unsellable</li>
+      </ul>
+      <p class="text-gray-700 mb-4">For growers selling by weight, even a 10% RH deviation below optimal can translate to a 20–30% yield reduction. <strong>Mushroom yield improvement by humidity control</strong> is not theoretical — it is direct, measurable, and immediate.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">Humidity Too High: Disease, Contamination, and Crop Loss</h3>
+      <p class="text-gray-700 mb-4">Paradoxically, too much humidity is even more dangerous. When RH exceeds 95% for extended periods, or when condensation forms on surfaces:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+        <li><strong>Bacterial blotch</strong> (<em>Pseudomonas tolaasii</em>) — brown, slimy lesions on mushroom caps; the #1 quality defect in button mushroom production</li>
+        <li><strong>Trichoderma green mold</strong> — a fast-growing competitor that colonizes substrate and crowds out cultivated mycelium</li>
+        <li><strong>Cobweb mold</strong> (<em>Cladobotryum</em>) — fluffy white-to-gray growth on mushrooms and casing soil that renders the crop unsellable</li>
+        <li><strong>Soft rot and decomposition</strong> — excess surface moisture breaks down fruit body tissue within hours</li>
+      </ul>
+      <p class="text-gray-700 mb-4">The critical insight: high humidity itself is not the enemy — <strong>stagnant, condensing humidity is</strong>. The solution is maintaining high RH with simultaneous air exchange. A well-designed <strong>greenhouse humidity control for mushroom cultivation</strong> system pairs humidification with fresh air exchange to keep RH high without surface wetness.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?w=800&q=80" alt="healthy vs diseased mushrooms comparison showing effects of improper humidity control" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Healthy mushrooms (left) vs. humidity-damaged crop with cracked caps and bacterial blotch (right) — a 10% RH deviation can cause 30% yield loss</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Three Humidity Control Scenarios: From Natural to Smart Greenhouse</h2>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">1. Natural / Traditional Cultivation</h3>
+      <p class="text-gray-700 mb-4">In outdoor or semi-outdoor mushroom beds, humidity depends entirely on weather and manual misting. This works for low-volume, seasonal production but cannot support consistent commercial yields. Growers rely on shade cloth, ground wetting, and hand misting — effective only when ambient humidity is naturally high (70%+).</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">2. Simple Grow Room (Converted Space)</h3>
+      <p class="text-gray-700 mb-4">A sealed room with basic humidifiers and exhaust fans is the entry point for most commercial growers. Ultrasonic humidifiers connected to a hygrostat can maintain 80–90% RH. However, these setups lack precision — humidity swings of ±10% are common, and there is no coordinated fresh air exchange. Contamination rates tend to be higher because stagnant humid air promotes mold.</p>
+
+      <h3 class="text-xl font-bold text-dark-900 mt-6 mb-3">3. Standardized Smart Mushroom Greenhouse</h3>
+      <p class="text-gray-700 mb-4">A purpose-built mushroom greenhouse with integrated <strong>mushroom grow room climate control</strong> represents the professional standard. These systems combine:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+        <li><strong>Ultrasonic or high-pressure fog humidifiers</strong> for fine mist that evaporates before reaching surfaces</li>
+        <li><strong>Industrial dehumidifiers</strong> to pull moisture back during flush transitions or when ambient RH spikes</li>
+        <li><strong>Smart controllers with Modbus/RS485</strong> for stage-based RH scheduling and remote monitoring</li>
+        <li><strong>Synchronized fresh air exchange</strong> — CO₂ extraction and humidification run in coordinated cycles</li>
+      </ul>
+      <p class="text-gray-700 mb-4">This is where <strong>mushroom plantation greenhouse construction</strong> meets climate engineering. The greenhouse is designed around the mushroom's biological schedule, not the other way around.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80" alt="smart mushroom greenhouse with integrated climate control system and control panel" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">A standardized smart mushroom greenhouse combines humidification, dehumidification, and coordinated air exchange — the professional standard for commercial cultivation</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Building a Mushroom-Specific Greenhouse Climate System</h2>
+      <p class="text-gray-700 mb-4">For greenhouse construction clients and engineering firms, mushroom cultivation has unique design requirements that differ significantly from plant-based greenhouses:</p>
+
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Insulation and vapor barriers:</strong> Mushroom houses operate at 85–95% RH continuously. Without proper vapor barriers in walls, ceilings, and floors, moisture migrates into the structure, causing rot and thermal loss. Closed-cell insulation (minimum R-15) with sealed vapor barriers is non-negotiable.</li>
+        <li><strong>Air exchange without humidity loss:</strong> Mushrooms need 4–10 air changes per hour (species-dependent) to flush CO₂, but every air change brings in drier outside air. A heat recovery ventilator (HRV) with an integrated humidification loop solves this — exchanging air while recapturing moisture and heat.</li>
+        <li><strong>Zoned climate control:</strong> Commercial operations run multiple grow rooms at different growth stages simultaneously. Each room needs independent humidity, temperature, and CO₂ control. A central PLC or BMS with Modbus RTU communication can manage 4–16 zones from a single interface.</li>
+        <li><strong>Drainage and condensate management:</strong> At 95% RH, condensation is inevitable. Floors must slope to drains, walls must be washable and non-porous, and ceiling condensation must be captured or directed away from crops.</li>
+      </ul>
+
+      <p class="text-gray-700 mb-4">For <strong>agricultural climate distributor</strong> partners, these design requirements translate directly into equipment specifications — the right humidifier capacity, dehumidifier sizing, controller type, and sensor package for each project.</p>
+
+      <figure class="my-8">
+        <img src="https://images.unsplash.com/photo-1530768054212-99af45dba8e2?w=800&q=80" alt="industrial humidity control equipment with Modbus controller for mushroom greenhouse" class="w-full rounded-xl" loading="lazy" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Mushroom greenhouse climate systems require integrated humidification, dehumidification, and Modbus-based zone control — engineered for continuous 85–95% RH operation</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Smart Humidity Equipment: Advantages and Distributor Value</h2>
+      <p class="text-gray-700 mb-4">Modern mushroom climate systems have moved far beyond on/off humidistats. Today's professional equipment offers:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+        <li><strong>PID-controlled ultrasonic humidification</strong> — maintains RH within ±2% instead of the ±10% swings of basic systems</li>
+        <li><strong>Remote monitoring via Modbus 485</strong> — growers can check and adjust room conditions from a phone, and integrate with existing farm management software</li>
+        <li><strong>Dual-mode operation</strong> — a single system can humidify during pinning and dehumidify during flush transitions, eliminating the need for separate equipment</li>
+        <li><strong>Data logging and yield correlation</strong> — track RH, temperature, and CO₂ against harvest weight to optimize your recipe over time</li>
+      </ul>
+      <p class="text-gray-700 mb-4">For distributors serving the mushroom cultivation market, these features create clear differentiation. Growers who upgrade from basic humidistats to smart controllers typically see 15–25% yield improvements within the first cycle — a compelling ROI story that drives repeat purchases and referrals.</p>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Common Mistakes and Practical Tips</h2>
+      <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+        <li><strong>Mistake 1: Misting directly on mushrooms.</strong> Water droplets on caps cause bacterial blotch within hours. Use ultrasonic or fog humidifiers that produce mist fine enough to evaporate before contact.</li>
+        <li><strong>Mistake 2: One setpoint for the whole cycle.</strong> Mushrooms need different RH at each stage. Program your controller to shift automatically — 75% spawn run, 95% pinning, 85% fruiting.</li>
+        <li><strong>Mistake 3: Ignoring CO₂ when managing humidity.</strong> Humidification and air exchange are linked. When you run fresh air to reduce CO₂, you lose humidity. Coordinate both with a smart controller, not separate timers.</li>
+        <li><strong>Mistake 4: No dehumidification capacity.</strong> Many growers install humidifiers but no dehumidifiers. When ambient humidity spikes or a flush ends, you need to pull moisture out fast. A closed-loop system with both is the professional standard.</li>
+        <li><strong>Practical tip:</strong> Place humidity sensors at canopy height, not on the wall. A 5% RH difference between wall-mounted sensors and actual mushroom-level conditions is common — and enough to cause problems during pinning.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-dark-900 mt-8 mb-4">Conclusion</h2>
+      <p class="text-gray-700 mb-4">Mushroom growing humidity control is not about keeping things "damp." It is about maintaining species-specific, stage-specific RH ranges with precision — high enough to support fruit body development, controlled enough to prevent disease, and coordinated with air exchange to manage CO₂.</p>
+      <p class="text-gray-700 mb-4">Whether you are a grower looking to increase yields, a greenhouse builder designing a mushroom facility, or an agricultural climate distributor sourcing equipment for clients, the principle is the same: <strong>the right humidity system is the highest-ROI investment in mushroom cultivation.</strong></p>
+
+      <div class="mt-8 p-6 bg-brand-50 rounded-xl">
+        <p class="text-gray-700 mb-2">Ready to design a humidity control system for your mushroom operation?</p>
+        <p class="text-gray-700"><a href="/contact" class="text-brand-600 hover:text-brand-700 underline font-semibold">Contact our engineering team</a> for a free consultation, or explore our <a href="/products/dehumidifiers" class="text-brand-600 hover:text-brand-700 underline font-semibold">industrial dehumidifiers</a> and <a href="/products/humidifiers" class="text-brand-600 hover:text-brand-700 underline font-semibold">ultrasonic humidifiers</a> designed for commercial mushroom cultivation.</p>
+      </div>
     `
   },
   'fruit-drying-science': {
@@ -405,6 +923,6 @@ useSEO({
   url: `https://growclimate.com/blog/${slug}`,
   type: 'article',
   publishedTime: post.value.date,
-  keywords: `${post.value.category}, greenhouse blog, climate control, dehumidifier guide, growing science`,
+  keywords: post.value.keywords || `${post.value.category}, greenhouse blog, climate control, dehumidifier guide, growing science`,
 })
 </script>

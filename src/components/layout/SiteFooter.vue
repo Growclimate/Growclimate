@@ -7,7 +7,7 @@
         <!-- Brand Column -->
         <div class="lg:col-span-1">
           <RouterLink to="/" class="inline-block mb-4">
-            <img src="/images/logo.png" alt="GrowClimate" class="h-20 w-auto" />
+            <img src="/images/logo.png" alt="GrowClimate" class="h-20 w-auto" loading="lazy" />
           </RouterLink>
           <p class="text-gray-400 text-sm leading-relaxed mb-6">
             Precision climate control solutions for greenhouse, hydroponics, and indoor farming. Engineering reliability since day one.
