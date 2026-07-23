@@ -36,6 +36,7 @@ export default defineConfig({
       '/blog/desiccant-vs-compressor',
       '/blog/mushroom-farming-climate',
       '/blog/mushroom-growing-humidity-control',
+      '/blog/greenhouse-condensation-prevention',
       '/blog/fruit-drying-science',
       '/blog/seed-storage-humidity',
       '/blog/cannabis-drying-guide',

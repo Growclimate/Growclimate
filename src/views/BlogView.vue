@@ -91,6 +91,14 @@ const featured = {
 
 const posts = [
   {
+    slug: 'greenhouse-condensation-prevention',
+    title: 'Greenhouse Condensation Prevention: A Grower\'s Complete Guide',
+    category: 'Greenhouse Climate Control',
+    date: 'July 20, 2026',
+    image: '/images/blog/Commercial_greenhouse_interior_2026-07-22T07-59-12.png',
+    excerpt: 'Discover effective greenhouse condensation prevention strategies to reduce leaf wetness, prevent fungal disease, and protect crop yields year-round.'
+  },
+  {
     slug: 'mushroom-growing-humidity-control',
     title: 'Mushroom Growing Humidity Control: The Complete Guide to Maximizing Yield',
     category: 'Crop Science',
